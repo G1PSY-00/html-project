@@ -1,0 +1,114 @@
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4; 
+    color: #000000;
+}
+
+/* Header */
+h1 {
+    background-color: #2e51a2; 
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin: 0;
+    font-size: 2em;
+}
+
+.genre {
+    color: #2e51a2;
+    border-bottom: 2px solid #bdc3c7;
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+/* Ordered list*/
+ol {
+    padding-left: 20px;
+}
+
+li {
+    margin-bottom: 30px;
+    border: 1px solid #d3d3d3; 
+    padding: 15px;
+    background-color: white;
+    border-width: 20px;
+}
+
+/* Anchor Tags, Links */
+a {
+    color: #2e51a2; 
+}
+
+
+img {
+    
+    height: auto;
+    margin: 15px 0;
+    border-radius: 4px;
+}
+
+/* DIV for ordered list*/
+.OL2 {
+    width: 1200px;
+    background-color: white;
+    padding: 20px;
+    border: 20px solid #2e51a2;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+/* Genres list */
+
+ul li {
+    margin: 10px 0;
+    font-size: 1.1em;
+}
+
+/* Horizontal rule */
+
+.OL2 {
+    text-align: center;
+}
+.SFBD {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    color: #000000;
+}
+.SFH1 {
+    background-color: #2e51a2;
+    
+
+}
+.SFUL {
+    width: 600px;
+    margin-left: 400px;
+    margin-right: 500px;
+    background-color: white;
+    padding: 20px;
+    border: 1px solid #dcdcdc;
+    border-radius: 10px;
+    text-align: center;
+}
+.TP {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    text-align: center;
+}
+p a {
+    padding: 10px 15px;
+    background-color: #2e51a2;
+    color: white;
+    text-decoration: none;
+    font-family: Arial, sans-serif;
+}
+
+a {
+    padding: 10px 15px;
+    background-color: #2e51a2;
+    color: white;
+    text-decoration: none;
+    font-family: Arial, sans-serif;
+}
