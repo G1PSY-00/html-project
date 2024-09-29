@@ -16,13 +16,12 @@ h1 {
     margin: 0;
     font-size: 2em;
 }
-
+/* genre on the index page */
 .genre {
-    width: 600px;
-    margin-left: 400px;
-    margin-right: 500px;
-    background-color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold; 
     text-align: center;
+    margin: auto;
     
 }
 
@@ -53,7 +52,7 @@ img {
 }
 
 /* DIV for ordered list*/
-.OL2 {
+.list {
     width: 600px;
     background-color: white;
     padding: 20px;
@@ -62,16 +61,7 @@ img {
     margin-right: 500px;
 }
 
-/* Genres list */
-
-ul li {
-    margin: 10px 0;
-    font-size: 1.1em;
-}
-
-/* Horizontal rule */
-
-.OL2 {
+.list {
     text-align: center;
 }
 .SFBD {
@@ -86,19 +76,12 @@ ul li {
     background-color: #2e51a2; /*Heading for SciFi*/
     
 }
-
-.UL {
-    width: 600px;
-    margin-left: 400px;
-    margin-right: 500px;
-    background-color: white; /*UNORDERED LIST*/
-    text-align: center;
-}
 .TP {
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold; /*TOP PICKS*/
     text-align: center;
     margin: auto;
+    font-size:x-largew
 }
 p a {
     padding: 10px 15px;
