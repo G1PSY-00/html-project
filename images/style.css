@@ -1,0 +1,73 @@
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: white; 
+    color: #000000;
+}
+
+/* Header */
+h1 {
+    background-color: #2e51a2; 
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin: 0;
+    font-size: 2em;
+}
+
+/* Image and text container */
+.list {
+    width: 600px;
+    background-color: white;
+    padding: 20px;
+    border: 20px solid #2e51a2;
+    margin: 20px auto; /* Centered with margin on auto */
+    text-align: center;
+}
+.TP {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold; /*TOP PICKS*/
+    text-align: center;
+    margin: auto;
+    font-size:x-large
+    
+}
+/*anime title, image, and link */
+div > div {
+    margin-bottom: 30px;
+    border: 1px solid #2e51a2; 
+    padding: 15px;
+    background-color: white;
+    border-width: 5px;
+}
+
+/* Image hover effect */
+img {
+    height: auto;
+    margin: 15px 0;
+    border-radius: 4px;
+}
+
+/* Anchor tags */
+p a {
+    padding: 10px 15px;
+    background-color: #2e51a2;
+    color: white;
+    font-family: Arial, sans-serif;
+    text-decoration: none;
+}
+
+a {
+    padding: 10px 15px;
+    background-color: #2e51a2;
+    color: white;
+    font-family: Arial, sans-serif;
+    text-decoration: none;
+}
+
+/* Hover styles for titles */
+h1:hover {
+    color: black;
+}
