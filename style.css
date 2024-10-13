@@ -16,21 +16,26 @@ h1 {
     margin: 0;
     font-size: 2em;
 }
-/* genre on the index page */
-.genre {
+
+/* Image and text container */
+.list {
+    width: 600px;
+    background-color: white;
+    padding: 20px;
+    border: 20px solid #2e51a2;
+    margin: 20px auto; /* Centered with margin on auto */
+    text-align: center;
+}
+.TP {
     font-family: Arial, Helvetica, sans-serif;
-    font-weight: bold; 
+    font-weight: bold; /*TOP PICKS*/
     text-align: center;
     margin: auto;
+    font-size:x-large
     
 }
-
-/* Ordered list*/
-ol {
-    padding-left: 20px;
-}
-
-li {
+/*anime title, image, and link */
+div > div {
     margin-bottom: 30px;
     border: 1px solid #2e51a2; 
     padding: 15px;
@@ -38,56 +43,20 @@ li {
     border-width: 5px;
 }
 
-/* Anchor Tags, Links */
-a {
-    color: #2e51a2; 
-}
-
-
+/* Image hover effect */
 img {
-    
     height: auto;
     margin: 15px 0;
     border-radius: 4px;
 }
 
-/* DIV for ordered list*/
-.list {
-    width: 600px;
-    background-color: white;
-    padding: 20px;
-    border: 20px solid #2e51a2;
-    margin-left: 400px;
-    margin-right: 500px;
-}
-
-.list {
-    text-align: center;
-}
-.SFBD {
-    font-family: Arial, sans-serif;
-    background-color: white;
-    margin: 0; /* MAKES THE PAGE ALIGN ON THE MIDDLE*/
-    padding: 0;
-    color: #000000;
-}
-
-.SFH1 {
-    background-color: #2e51a2; /*Heading for SciFi*/
-    
-}
-.TP {
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: bold; /*TOP PICKS*/
-    text-align: center;
-    margin: auto;
-    font-size:x-largew
-}
+/* Anchor tags */
 p a {
     padding: 10px 15px;
     background-color: #2e51a2;
     color: white;
     font-family: Arial, sans-serif;
+    text-decoration: none;
 }
 
 a {
@@ -95,7 +64,10 @@ a {
     background-color: #2e51a2;
     color: white;
     font-family: Arial, sans-serif;
+    text-decoration: none;
 }
-* {
-    background-color: white;
+
+/* Hover styles for titles */
+h1:hover {
+    color: black;
 }
