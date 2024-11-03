@@ -3,205 +3,296 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sci-Fi Anime</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="favicon.ico">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
-    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+    <link rel="icon" href="favicon.ico">
+    <title>Sci-Fi Anime Recommendations</title>
     <style>
-    h1 {
-        font-family: "Bebas Neue", sans-serif;
-        font-weight: 500;
-        font-style: normal;
-    }
-    h2 {
-        font-family: "Bebas Neue", sans-serif;
-        font-weight: 500;
-        font-style: normal;
-    }
-    a:hover {
-        color: black;
-    }
-    .CowboyBebop:hover img {
-        content: url(./images/bebop\ gif.gif);
-        height: 278px;
-        width: 498px;
-        border: solid #2e51a2 5px;
-    }
-    .CodeGeass:hover img {
-        content: url(./images/Lelouch.gif);
-        height: 278px;
-        width: 498px;
-        border: solid #2e51a2 5px;
-    }
-    .Evangelion:hover img {
-        content: url(./images/Eva\ rebuild.gif);
-        height: 278px;
-        width: 498px;
-        border: solid #2e51a2 5px;
-    }
-    .TTGL:hover img {
-        content: url(./images/Kamina.gif);
-        height: 278px;
-        width: 498px;
-        border: solid #2e51a2 5px;
-    }
-    .ZZ:hover img {
-        content: url(./images/ZZ.gif);
-        height: 278px;
-        width: 498px;
-        border: solid #2e51a2 5px;
-    }
-    .Hathaway:hover img {
-        content: url(./images/midflight\ battle.gif);
-        height: 278px;
-        width: 498px;
-        border: solid #2e51a2 5px;
-    }
-    .Unicorn:hover img {
-        content: url(./images/RX\ 0\ aka\ unicorn.gif);
-        height: 278px;
-        width: 498px;
-        border: solid #2e51a2 5px;
-    }
-    .Gundam_UC79:hover img {
-        content: url(./images/78-2.gif);
-        height: 278px;
-        width: 498px;
-        border: solid #2e51a2 5px;
-    }
-    .Stardust:hover img {
-        content: url(./images/GP02.gif);
-        height: 278px;
-        width: 498px;
-        border: solid #2e51a2 5px;
-    }
-    .MS08Team:hover img {
-        content: url(./images/ez\ 8.gif);
-        height: 278px;
-        width: 498px;
-        border: solid #2e51a2 5px;
-    }
-    .Origin:hover img {
-        content: url(./images/battle\ of\ loum.gif);
-        height: 278px;
-        width: 498px;
-        border: solid #2e51a2 5px;
-    }
-    .Thunderbolt:hover img {
-        content: url(./images/FA\ GUNDAM.gif);
-        height: 278px;
-        width: 498px;
-        border: solid #2e51a2 5px;
-    }
-    .Zeta:hover img {
-        content: url(./images/ZETAGUNDAM.gif);
-        height: 278px;
-        width: 498px;
-        border: solid #2e51a2 5px;
-    }
+        body {
+            font-family: "Bebas Neue", sans-serif;
+            background-color: #0d1321;
+            color: white;
+            margin: 0;
+            padding: 0;
+        }
+        p  {
+            font-family: "Josefin Sans", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 400;
+            font-style: normal;
+        }
+        h1 {
+            font-family: "Bebas Neue", sans-serif;
+            font-weight: 500;
+            font-style: normal;
+            color: #355E3b;
+            text-align: center;
+            font-weight: bold;
+            font-size: 55px;
+            
+        }
+        h1:hover {
+            color: #51e668;
+        }
+
+        hr {
+            border: 3px solid #20214d;
+        }
+
+        .list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .list > div {
+            display: inline-block;
+            background-color: #c5832b;
+            width: 300px;
+            margin: 15px;
+            padding: 15px;
+            border-radius: 5%;
+            text-align: center;
+            color: white;
+            vertical-align: top;
+            flex-wrap: wrap;
+        }
+        .list > div {
+            transition: transform 0.3s ease, background-color 0.3s ease;
+        }
+
+        .list > div:hover {
+            transform: scale(1.05);
+            background-color: #ff9800;}
+        .list img {
+            height: 278px; 
+            width: auto; 
+            max-width: 100%; 
+            border-bottom: 5px solid black;
+            border-top: 5px solid black;
+            border-radius: 15%;
+            flex-wrap: wrap;
+        }
+
+        .list h2 {
+            font-size: 24px;
+            margin: 10px 0;
+        
+        }
+        h2:hover {
+            color: yellow;
+        }
+
+        p a:hover {
+            background-color: #ff9800;
+            color: #0d1321;
+            transform: scale(1.05);
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+
+        .list p {
+            font-size: 16px;
+            color: #ccc;
+        }
+        .list:hover p{
+            color: white;
+        }
+        /* Hover effect for images */
+        .CowboyBebop:hover img {
+            content: url(./images/bebop%20gif.gif);
+        }
+
+        .CodeGeass:hover img {
+            content: url(./images/Lelouch.gif);
+        }
+
+        .Evangelion:hover img {
+            content: url(./images/Eva%20rebuild.gif);
+        }
+
+        .TTGL:hover img {
+            content: url(./images/Kamina.gif);
+        }
+
+        .ZZ:hover img {
+            content: url(./images/ZZ.gif);
+        }
+
+        .Hathaway:hover img {
+            content: url(./images/midflight%20battle.gif);
+        }
+
+        .Unicorn:hover img {
+            content: url(./images/RX%200%20aka%20unicorn.gif);
+        }
+
+        .Gundam_UC79:hover img {
+            content: url(./images/78-2.gif);
+        }
+
+        .Stardust:hover img {
+            content: url(./images/GP02.gif);
+        }
+
+        .MS08Team:hover img {
+            content: url(./images/ez%208.gif);
+        }
+
+        .Origin:hover img {
+            content: url(./images/battle%20of%20loum.gif);
+        }
+
+        .Thunderbolt:hover img {
+            content: url(./images/FA%20GUNDAM.gif);
+        }
+
+        .Zeta:hover img {
+            content: url(./images/ZETAGUNDAM.gif);
+        }
+        p a{
+            padding: 10px 15px;
+            background-color: #c5832b;
+            color: white;
+            border-radius: 15%;
+            color: #355E3b;
+        }
+        .sticky-header {
+            position: sticky;
+            top: 0;
+            background-color: #0d1321;
+            padding-top: 10px;
+            z-index: 1000;
+        }
+        .sidebar {
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 250px;
+            height: 100%;
+            background-color: #20214d;
+            color: white;
+            padding-top: 20px;
+            display: flex;
+            flex-direction: column;
+            }
+
+        .sidebar a {
+            display: block;
+            color: white;
+            padding: 15px;
+            text-decoration: none;
+            font-family: "Josefin Sans", sans-serif;
+            }
+
+        .sidebar a:hover {
+            background-color: #c5832b;
+            }
+.main-content {
+    margin-left: 250px;
+}
     </style>
 </head>
 <body>
-    <div class="SFBD"></div>
-    <div class="SFH1"><h1>Sci-Fi Anime Recommendations</h1></div>
+    <div class="main-content">
+    <div class="sidebar">
+        <h3></h3>
+        <a href="./index.html">Back to main page</a>
+        <a href="./Shonen.html">Shonen</a>
+        <a href="./Romance.html">Romance</a>
+        <a href="./Comedy.html">Comedy</a>
+    </div>
+    
+    <div class="sticky-header"><h1>Science Fiction</h1></div>
     <hr>
 
     <div class="list">
         <div class="CowboyBebop">
             <h2>Cowboy Bebop</h2>
-            <img src="./images/Cowboy Bebop.jpg" alt="Cowboy Bebop">
-            <p><a href="https://myanimelist.net/anime/1/Cowboy_Bebop">More info</a></p>
+            <img src="./images/Cowboy%20Bebop.jpg" alt="Cowboy Bebop">
+            <p>In 2071, humanity expands across the galaxy, causing crime and drug use in new societies. Spike Spiegel and Jet Black, along with Faye Valentine, Edward Wong Hau Pepelu Tivrusky IV, and Ein, work to catch criminals. However, their lives are disrupted by a rival's plot, and Spike must choose between life with his newfound family or revenge for his past wounds.</p>
         </div>
-        <hr>
 
         <div class="CodeGeass">
             <h2>Code Geass</h2>
             <img src="./images/CodeGeass.jpg" alt="Code Geass">
-            <p><a href="https://myanimelist.net/anime/1575/Code_Geass__Hangyaku_no_Lelouch">More info</a></p>
+            <p>In 2010, the Holy Empire of Britannia conquered Japan, leading to significant resistance. Lelouch Lamperouge, a Britannian student, is caught in a crossfire with Area 11 rebels. With the "Power of Kings" bestowed upon him, he embarks on a dangerous journey as Zero, leading a merciless onslaught against Britannia for revenge.</p>
         </div>
-        <hr>
 
         <div class="Evangelion">
             <h2>Neon Genesis Evangelion</h2>
             <img src="./images/Evangelion.jpg" alt="Evangelion">
-            <p><a href="https://myanimelist.net/anime/30/Neon_Genesis_Evangelion">More info</a></p>
+            <p>Angels, a threat to humanity, invade Tokyo-3, despite advanced military tactics. NERV, led by Gendou Ikari, employs Evangelions, giant humanoid robots, to combat them using advanced weaponry and Absolute Terror Fields, offering hope for human salvation.</p>
         </div>
-        <hr>
 
         <div class="TTGL">
-            <h2>Tengen Toppa Gurren Lagann</h2>
+            <h2>Gurren Lagann</h2>
             <img src="./images/TTGL.jpg" alt="TTGL">
-            <p><a href="https://myanimelist.net/anime/2001/Tengen_Toppa_Gurren_Lagann">More info</a></p>
+            <p>Yoko Littner, a redhead, helps Simon and Kamina, two young boys from a deep underground village, escape a surprise attack from the surface. They discover the ignition key to an ancient war artifact, Lagann, while excavating the earth. Together, they use their new weapon to defend themselves from the surface's attacks.</p>
         </div>
-        <hr>
 
         <div class="ZZ">
             <h2>Mobile Suit Gundam Double Zeta</h2>
-            <img src="./images/Double Zeta.jpg" alt="Double Zeta">
-            <p><a href="https://myanimelist.net/anime/86/Mobile_Suit_Gundam_Double_Zeta">More info</a></p>
+            <img src="./images/Double%20Zeta.jpg" alt="Double Zeta">
+            <p>The AEUG flagship Argama is sent to Shangri-La for repairs, where 14-year-old Judau Ashta lives. They discover an escape pod containing a former Titans pilot and plan to steal a mobile suit. However, a Neo-Zeon ship arrives to defeat the Argama, causing a conflict that will take them across space and Earth.</p>
         </div>
-        <hr>
 
         <div class="Hathaway">
             <h2>Mobile Suit Gundam: Hathaway's Flash</h2>
-            <img src="./images/Hathaway Flash.jpg" alt="Hathaway Flash">
-            <p><a href="https://myanimelist.net/anime/37765/Kidou_Senshi_Gundam__Senkou_no_Hathaway">More info</a></p>
+            <img src="./images/Hathaway%20Flash.jpg" alt="Hathaway Flash">
+            <p>In UC 105, Amuro Ray sacrifices for peace, yet the Earth Federation remains militaristic. Char Aznable's rebellion fails, but his revolutionary ideas endure. Hathaway Noa, son of a Federation commander, embodies Amuro's loyalty and Char's militant fervor as he leads the dissident group Mafty Navue Erin, resorting to violence against the Federation's tyranny.</p>
         </div>
-        <hr>
 
         <div class="Unicorn">
             <h2>Mobile Suit Gundam Unicorn</h2>
             <img src="./images/UNICORN.jpg" alt="Unicorn">
-            <p><a href="https://myanimelist.net/anime/6336/Kidou_Senshi_Gundam_Unicorn">More info</a></p>
+            <p>In Universal Century 0096, three years after Char Aznable's failed attempt to force human migration into space, life continues in Earth's colonies. One such colony, Side 4, is home to 16-year-old Banagher Links. Audrey Burne, the last descendant of a tyrannical family, steals the key to "Laplace's Box," a mysterious device with the power to shape the universe. She discovers Banagher and changes his life forever.</p>
         </div>
-        <hr>
 
         <div class="Gundam_UC79">
             <h2>Mobile Suit Gundam</h2>
             <img src="./images/UC97.jpg" alt="UC97">
-            <p><a href="https://myanimelist.net/anime/80/Kidou_Senshi_Gundam">More info</a></p>
+            <p>In the year 0079 of the Universal Century, the Principality of Zeon wages war on the Earth Federation using powerful mobile suits. When 15-year-old Amuro Ray stumbles upon the Federation's new Gundam, he's drawn into a battle across Earth and space, facing Zeon's ace pilot, Char Aznable.</p>
         </div>
-        <hr>
 
         <div class="Stardust">
             <h2>Mobile Suit Gundam 0083: Stardust Memory</h2>
-            <img src="./images/Stardust Memory.jpg" alt="Stardust Memory">
-            <p><a href="https://myanimelist.net/anime/84/Kidou_Senshi_Gundam_0083__Stardust_Memory">More info</a></p>
+            <img src="./images/Stardust%20Memory.jpg" alt="Stardust Memory">
+            <p>In UC 0083, remnants of the defeated Principality of Zeon, led by Aguille Delaz, attempt to rise again. Anavel Gato infiltrates a Federation base to steal a nuclear-equipped prototype Gundam. In response, the Earth Federation deploys the Albion carrier, with rookie pilot Kou Uraki at the helm of the remaining Gundam, to stop Gato and prevent another war.</p>
         </div>
-        <hr>
 
         <div class="MS08Team">
             <h2>Mobile Suit Gundam: The 08th MS Team</h2>
-            <img src="./images/08th ms team.jpg" alt="08th MS Team">
-            <p><a href="https://myanimelist.net/anime/81/Kidou_Senshi_Gundam__Dai_08_MS_Shoutai">More info</a></p>
+            <img src="./images/08th%20ms%20team.jpg" alt="08th MS Team">
+            <p>In UC 0079, after successfully retaking a Ukrainian city in Operation Odessa, the Earth Federation gains the upper hand in the One Year War. Ensign Shiro Amada leads the 08th MS Team to distract Zeon forces while searching for a new weapon. His resolve wavers when he reunites with Aina Sahalin, a Zeon ace pilot, forcing him to confront his loyalty to the Federation or face being branded a traitor.</p>
         </div>
-        <hr>
 
         <div class="Origin">
             <h2>Mobile Suit Gundam: The Origin</h2>
             <img src="./images/ORIGINS.jpg" alt="Origin">
-            <p><a href="https://myanimelist.net/anime/10937/Kidou_Senshi_Gundam__The_Origin">More info</a></p>
+            <p>In UC 0068, after his father's assassination, Casval Rem Deikun and his sister Artesia are separated and face a chaotic future. As Casval evolves into Char Aznable, he struggles with the militarization of his father's ideals and his own desire for vengeance, ultimately becoming a legendary mobile suit pilot in an intergalactic war.</p>
         </div>
-        <hr>
 
         <div class="Thunderbolt">
             <h2>Mobile Suit Gundam: Thunderbolt</h2>
             <img src="./images/thunderbolt.jpg" alt="Thunderbolt">
-            <p><a href="https://myanimelist.net/anime/31973/Kidou_Senshi_Gundam_Thunderbolt">More info</a></p>
+            <p>In UC 0079, during the One Year War, the Earth Federation and Principality of Zeon battle in the Thunderbolt Sector. Federation pilot Io Fleming leads an assault against Zeon ace Daryl Lorenz and his snipers. After Io acquires a prototype Gundam, Daryl faces a critical choice: sacrifice everything to defeat Io and ensure Zeon's victory or risk losing his comrades.</p>
         </div>
-        <hr>
 
         <div class="Zeta">
             <h2>Mobile Suit Zeta Gundam</h2>
             <img src="./images/aswZETA.jpg" alt="Zeta">
-            <p><a href="https://myanimelist.net/anime/85/Kidou_Senshi_Z_Gundam">More info</a></p>
+            <p>In UC 0087, after the One Year War, the Earth Federation's Titans are formed to hunt remaining Zeon forces, but their oppressive tactics spark the rise of the AEUG. Seventeen-year-old Kamille Bidan, living near a Titan base in Green Noa, gets into trouble for assaulting a Titan officer. When he steals a Titan prototype Gundam during an attack led by former Zeon ace Char Aznable, now AEUG pilot Quattro Bajeena, he is drawn into a dangerous conflict.</p>
         </div>
-
+    </div>
     </div>
     <hr>
-    <p><a href="index.html">Back to Main Page</a></p>
+    
+    <p><a href="./index.html">Back to Main Page</a></p>
 </body>
 </html>
