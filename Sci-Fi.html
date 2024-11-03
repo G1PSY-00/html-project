@@ -103,6 +103,11 @@
         .list:hover p{
             color: white;
         }
+        .list:hover > :not(:hover){
+            filter: blur(5px);
+            opacity: 0.5;
+        }
+
         /* Hover effect for images */
         .CowboyBebop:hover img {
             content: url(./images/bebop%20gif.gif);
@@ -193,22 +198,24 @@
         .sidebar a:hover {
             background-color: #c5832b;
             }
-.main-content {
-    margin-left: 250px;
-}
+        .main-content {
+            margin-left: 250px;
+            }
     </style>
 </head>
 <body>
     <div class="main-content">
     <div class="sidebar">
-        <h3></h3>
         <a href="./index.html">Back to main page</a>
+        <br>
         <a href="./Shonen.html">Shonen</a>
         <a href="./Romance.html">Romance</a>
         <a href="./Comedy.html">Comedy</a>
     </div>
     
-    <div class="sticky-header"><h1>Science Fiction</h1></div>
+    <div class="sticky-header">
+    <h1 draggable="true">Science Fiction</h1>
+    </div>
     <hr>
 
     <div class="list">
