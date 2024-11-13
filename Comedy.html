@@ -3,139 +3,216 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Comedy Anime</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="favicon.ico">
+    <title>Comedy Anime Recommendations</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Josefin+Sans:wght@400&display=swap" rel="stylesheet">
     <style>
-    h1 {
-        font-family: "Bebas Neue", sans-serif;
-        font-weight: 500;
-        font-style: normal;
-    }
-    h2 {
-        font-family: "Bebas Neue", sans-serif;
-        font-weight: 500;
-        font-style: normal;
-    }
-    a:hover {
-        color: black;
-    }
-    .MobPsycho:hover img {
-        content: url(./images/mob\ gif.gif);
-        height: 278px;
-        width: 498px;
-        border: solid #2e51a2 5px;
-    }
-    .Konosuba:hover img {
-        content: url(./images/Aqua.gif);
-        height: 278px;
-        width: 498px;
-        border: solid #2e51a2 5px;
-    }
-    .KillLaKill:hover img {
-        content: url(./images/K1ll.gif);
-        height: 278px;
-        width: 498px;
-        border: solid #2e51a2 5px;
-    }
-    .PrisonSchool:hover img {
-        content: url(./images/PS\ GIF.gif);
-        height: 278px;
-        width: 498px;
-        border: solid #2e51a2 5px;
-    }
-    .GTO:hover img {
-        content: url(./images/Onizuka.gif);
-        height: 278px;
-        width: 498px;
-        border: solid #2e51a2 5px;
-    }
-    .GrandBlue:hover img {
-        content: url(./images/Chisa\ slap.gif);
-        height: 278px;
-        width: 498px;
-        border: solid #2e51a2 5px;
-    }
-    .KOn:hover img {
-        content: url(./images/k\ on\ gif.gif);
-        height: 278px;
-        width: 498px;
-        border: solid #2e51a2 5px;
-    }
-    .BocchiTheRock:hover img {
-        content: url(./images/bocchi\ gif.gif);
-        height: 278px;
-        width: 498px;
-        border: solid #2e51a2 5px;
-    }
+        body {
+            font-family: "Bebas Neue", sans-serif;
+            background-color: #0d1321;
+            color: white;
+            margin: 0;
+            padding: 0;
+        }
+        p {
+            font-family: "Josefin Sans", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 400;
+            font-style: normal;
+        }
+        h1 {
+            font-family: "Bebas Neue", sans-serif;
+            font-weight: 500;
+            font-style: normal;
+            color: #355E3b;
+            text-align: center;
+            font-weight: bold;
+            font-size: 55px;
+        }
+        h1:hover {
+            color: #51e668;
+        }
+        hr {
+            border: 3px solid #20214d;
+        }
+        .list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 20px;
+        }
+        .list > div {
+            display: inline-block;
+            background-color: #c5832b;
+            width: 300px;
+            margin: 15px;
+            padding: 15px;
+            border-radius: 5%;
+            text-align: center;
+            color: white;
+            vertical-align: top;
+        }
+        .list > div:hover {
+            transform: scale(1.05);
+            background-color: #ff9800;
+            transition: transform 0.3s ease, background-color 0.3s ease;
+        }
+        .list img {
+            height: 278px; 
+            width: auto; 
+            max-width: 100%; 
+            border-bottom: 5px solid black;
+            border-top: 5px solid black;
+            border-radius: 15%;
+        }
+        .list h2 {
+            font-size: 24px;
+            margin: 10px 0;
+        }
+        h2:hover {
+            color: yellow;
+        }
+        .list p {
+            font-size: 16px;
+            color: #ccc;
+        }
+        p a {
+            padding: 10px 15px;
+            background-color: #c5832b;
+            color: #355E3b;
+            border-radius: 15%;
+            text-decoration: none;
+            font-family: "Josefin Sans", sans-serif;
+        }
+        p a:hover {
+            background-color: #ff9800;
+            color: #0d1321;
+            transform: scale(1.05);
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+        /* Image hover effects */
+        .BocchiTheRock:hover img { 
+            content: url(./images/bocchi\ gif.gif); 
+        }
+        .GrandBlue:hover img { 
+            content: url(./images/Chisa\ slap.gif); 
+        }
+        .GTO:hover img { 
+            content: url(./images/Onizuka.gif); 
+        }
+        .KOn:hover img { 
+            content: url(./images/k\ on\ gif.gif); 
+        }
+        .Konosuba:hover img { 
+            content: url(./images/Konosuba.jpg); 
+        }
+        .MobPsycho:hover img { 
+            content: url(./images/mob\ gif.gif); 
+        }
+        .PrisonSchool:hover img { 
+            content: url(./images/PS\ GIF.gif); 
+        }
+        .KillLaKill:hover img { 
+            content: url(./images/K1ll.gif); 
+        }
+        .sidebar {
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 250px;
+            height: 100%;
+            background-color: #20214d;
+            color: white;
+            padding-top: 20px;
+            display: flex;
+            flex-direction: column;
+        }
+        .sidebar a {
+            display: block;
+            color: white;
+            padding: 15px;
+            text-decoration: none;
+            font-family: "Josefin Sans", sans-serif;
+        }
+        .sidebar a:hover {
+            background-color: #c5832b;
+        }
+        .main-content {
+            margin-left: 250px;
+            padding: 20px;
+        }
     </style>
 </head>
 <body>
-    <div class="SFBD"></div>
-    <div class="SFH1"><h1>Comedy Anime Recommendations</h1></div>
-    <hr>
-
-    <div class="list">
-        <div class="BocchiTheRock">
-            <h2>Bocchi the Rock</h2>
-            <img src="./images/bocchi.jpg" alt="Bocchi the Rock">
-            <p><a href="https://myanimelist.net/anime/47917/Bocchi_the_Rock">More info</a></p>
+    <div class="main-content">
+        <div class="sidebar">
+            <a href="index.html">Back to main page</a>
+            <a href="Shonen.html">Shonen</a>
+            <a href="Romance.html">Romance</a>
+            <a href="Sci-Fi.html">Sci-Fi</a>
         </div>
+
+        <h1 draggable="true">Comedy Anime Recommendations</h1>
         <hr>
 
-        <div class="GrandBlue">
-            <h2>Grand Blue Dreaming</h2>
-            <img src="./images/GB.jpg" alt="Grand Blue Dreaming">
-            <p><a href="https://myanimelist.net/anime/37105/Grand_Blue">More info</a></p>
-        </div>
-        <hr>
+        <div class="list">
+            <div class="BocchiTheRock">
+                <h2>Bocchi the Rock</h2>
+                <img src="images/bocchi.jpg" alt="Bocchi the Rock">
+                <p>Follow the story of Hitori Gotou, a painfully shy girl with a passion for the guitar, who unexpectedly finds herself as part of a rock band. A mix of relatable social struggles and humorous band antics, this anime is both endearing and hilarious.</p>
+                <p><a href="https://myanimelist.net/anime/47917/Bocchi_the_Rock">More info</a></p>
+            </div>
 
-        <div class="GTO">
-            <h2>Great Teacher Onizuka</h2>
-            <img src="./images/great teacher.jpg" alt="Great Teacher Onizuka">
-            <p><a href="https://myanimelist.net/anime/245/Great_Teacher_Onizuka">More info</a></p>
-        </div>
-        <hr>
+            <div class="GrandBlue">
+                <h2>Grand Blue Dreaming</h2>
+                <img src="images/GB.jpg" alt="Grand Blue Dreaming">
+                <p>Iori Kitahara's college life begins with unexpected debauchery as he joins a diving club full of eccentric characters. A combination of outlandish comedy and friendship, this series shows college life like no other.</p>
+                <p><a href="https://myanimelist.net/anime/37105/Grand_Blue">More info</a></p>
+            </div>
 
-        <div class="KillLaKill">
-            <h2>Kill la Kill</h2>
-            <img src="./images/KlK.jpg" alt="Kill la Kill">
-            <p><a href="https://myanimelist.net/anime/18679/Kill_la_Kill">More info</a></p>
-        </div>
-        <hr>
+            <div class="GTO">
+                <h2>Great Teacher Onizuka</h2>
+                <img src="images/great teacher.jpg" alt="Great Teacher Onizuka">
+                <p>Ex-biker gang leader Eikichi Onizuka becomes a teacher, determined to bring out the best in his troubled students with unconventional and hilarious teaching methods. A mix of heartwarming moments and outrageous humor.</p>
+                <p><a href="https://myanimelist.net/anime/245/Great_Teacher_Onizuka">More info</a></p>
+            </div>
 
-        <div class="KOn">
-            <h2>K-On!</h2>
-            <img src="./images/K on.jpg" alt="K-On!">
-            <p><a href="https://myanimelist.net/anime/5680/K-On">More info</a></p>
-        </div>
-        <hr>
+            <div class="KOn">
+                <h2>K-On!</h2>
+                <img src="images/K on.jpg" alt="K-On!">
+                <p>Join Yui Hirasawa and her friends as they form a high school music club that’s more about tea and sweets than actual practice. With plenty of lighthearted moments, this anime celebrates friendship and the joy of making music together.</p>
+                <p><a href="https://myanimelist.net/anime/5680/K-On">More info</a></p>
+            </div>
 
-        <div class="Konosuba">
-            <h2>KonoSuba</h2>
-            <img src="./images/Konosuba.jpg" alt="KonoSuba">
-            <p><a href="https://myanimelist.net/anime/30831/Kono_Subarashii_Sekai_ni_Shukufuku_wo">More info</a></p>
-        </div>
-        <hr>
+            <div class="Konosuba">
+                <h2>KonoSuba</h2>
+                <img src="images/Konosuba.jpg" alt="KonoSuba">
+                <p>After an untimely death, Kazuma Satou finds himself in a fantasy world, only to realize that his new life isn’t as glamorous as he expected. With a dysfunctional party, he embarks on comedic adventures filled with hilarious misfortunes.</p>
+                <p><a href="https://myanimelist.net/anime/30831/Kono_Subarashii_Sekai_ni_Shukufuku_wo">More info</a></p>
+            </div>
 
-        <div class="MobPsycho">
-            <h2>Mob Psycho 100</h2>
-            <img src="./images/mob.jpg" alt="Mob Psycho 100">
-            <p><a href="https://myanimelist.net/anime/32182/Mob_Psycho_100">More info</a></p>
-        </div>
-        <hr>
+            <div class="MobPsycho">
+                <h2>Mob Psycho 100</h2>
+                <img src="images/mob.jpg" alt="Mob Psycho 100">
+                <p>Shigeo “Mob” Kageyama, a powerful psychic, wants nothing more than to lead a normal life. Under the mentorship of a less-than-genuine psychic, he navigates adolescence and learns to control his overwhelming powers in this blend of action and comedy.</p>
+                <p><a href="https://myanimelist.net/anime/32182/Mob_Psycho_100">More info</a></p>
+            </div>
 
-        <div class="PrisonSchool">
-            <h2>Prison School</h2>
-            <img src="./images/PS.jpg" alt="Prison School">
-            <p><a href="https://myanimelist.net/anime/30240/Prison_School">More info</a></p>
+            <div class="PrisonSchool">
+                <h2>Prison School</h2>
+                <img src="images/PS.jpg" alt="Prison School">
+                <p>Five boys enroll in an all-girls school and find themselves in constant trouble. Hilarious and raunchy, this anime chronicles their misadventures as they try to survive strict punishment from the underground student council.</p>
+                <p><a href="https://myanimelist.net/anime/30240/Prison_School">More info</a></p>
+            </div>
+
+            <div class="KillLaKill">
+                <h2>Kill la Kill</h2>
+                <img src="images/KlK.jpg" alt="Kill la Kill">
+                <p>In a world where clothing holds power, Ryuko Matoi, armed with a powerful weapon, seeks revenge for her father’s death. Mixing over-the-top action with wild humor, this anime is an energetic journey filled with suspense and laughs.</p>
+                <p><a href="https://myanimelist.net/anime/18679/Kill_la_Kill">More info</a></p>
+            </div>
         </div>
     </div>
-    <hr>
-    <p><a href="index.html">Back to Main Page</a></p>
 </body>
 </html>
