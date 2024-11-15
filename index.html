@@ -10,7 +10,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
     <style>
-        /* Base styles */
         body {
             font-family: "Bebas Neue", sans-serif;
             background-color: #0d1321;
@@ -19,7 +18,6 @@
             padding: 0;
         }
 
-        /* Common paragraph styling */
         p {
             font-family: "Josefin Sans", sans-serif;
             font-weight: 400;
@@ -39,13 +37,6 @@
         h1:hover {
             color: #51e668;
         }
-
-        /* Section separator */
-        hr {
-            border: 3px solid #20214d;
-            margin-top: 20px;
-        }
-
         /* Container to hold navbar and heading in a row */
         .header-container {
             display: flex;
@@ -79,7 +70,7 @@
             flex-wrap: wrap;
             justify-content: center;
             padding: 20px;
-            gap: 20px; /* Ensure spacing between entries */
+            gap: 20px;
         }
 
         /* Individual anime entry styling */
@@ -124,7 +115,7 @@
             color: yellow;
         }
 
-        /* Link styling */
+        /* Link styles */
         p a {
             padding: 10px 15px;
             background-color: #c5832b;
@@ -140,11 +131,7 @@
             transition: background-color 0.3s ease, transform 0.3s ease;
         }
 
-        /* Media Queries for responsiveness */
-
-        /* For devices with a screen width of 768px or smaller (e.g., tablets and smartphones) */
         @media (max-width: 768px) {
-            /* Adjust header layout */
             .header-container {
                 flex-direction: column;
                 text-align: center;
@@ -154,7 +141,6 @@
                 font-size: 28px;
             }
 
-            /* Adjust navbar items to stack vertically */
             .navbar {
                 flex-direction: column;
                 gap: 15px;
@@ -164,7 +150,6 @@
                 font-size: 16px;
             }
 
-            /* Adjust anime entries to use the full width */
             .list > div,
             .anime-entry {
                 width: 100%;
@@ -172,7 +157,6 @@
                 margin: 10px 0;
             }
 
-            /* Adjust anime image size */
             .list img,
             .anime-entry img {
                 height: auto;
@@ -180,7 +164,6 @@
             }
         }
 
-        /* For devices with a screen width of 480px or smaller (e.g., mobile phones) */
         @media (max-width: 480px) {
             h1 {
                 font-size: 24px;
@@ -201,7 +184,6 @@
             }
         }
 
-        /* For larger screens (like desktops or large tablets) */
         @media (min-width: 1024px) {
             .header-container {
                 padding: 20px 100px;
@@ -219,7 +201,7 @@
             .anime-entry {
                 width: 300px;
             }
-        }
+            }
     </style>
 </head>
 <body>
@@ -230,7 +212,7 @@
             <a class="nav-item" href="./Sci-Fi.html">Sci-Fi</a>
             <a class="nav-item" href="./Romance.html">Romance</a>
             <a class="nav-item" href="./Comedy.html">Comedy</a>
-            <a class="nav-item" href="#">About me</a>
+            <a class="nav-item" href="./profile.html">About me</a>
         </div>
     </div>
     <div class="list">
@@ -253,5 +235,6 @@
         </div>
     </div>
     <hr>
+    <footer><p>&copy; 2024 Anime Recommendations. All rights reserved.</p></footer>
 </body>
 </html>

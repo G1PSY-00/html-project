@@ -10,267 +10,338 @@
     <link rel="icon" href="favicon.ico">
     <title>Shonen Anime Recommendations</title>
     <style>
-        body {
-            font-family: "Bebas Neue", sans-serif;
-            background-color: #0d1321;
-            color: white;
-            margin: 0;
-            padding: 0;
-        }
-        p {
-            font-family: "Josefin Sans", sans-serif;
-            font-optical-sizing: auto;
-            font-weight: 400;
-            font-style: normal;
-        }
-        h1 {
-            font-family: "Bebas Neue", sans-serif;
-            font-weight: 500;
-            font-style: normal;
-            color: #355E3b;
-            text-align: center;
-            font-weight: bold;
-            font-size: 55px;
-        }
-        h1:hover {
-            color: #51e668;
-        }
-        hr {
-            border: 3px solid #20214d;
-        }
-        .list {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            padding: 20px;
-        }
-        .list > div {
-            display: inline-block;
-            background-color: #c5832b;
-            width: 300px;
-            margin: 15px;
-            padding: 15px;
-            border-radius: 5%;
-            text-align: center;
-            color: white;
-            vertical-align: top;
-            flex-wrap: wrap;
-            transition: transform 0.3s ease, background-color 0.3s ease;
-        }
-        .list > div:hover {
-            transform: scale(1.05);
-            background-color: #ff9800;
-        }
-        .list img {
-            height: 278px; 
-            width: auto; 
-            max-width: 100%; 
-            border-bottom: 5px solid black;
-            border-top: 5px solid black;
-            border-radius: 15%;
-            flex-wrap: wrap;
-        }
-        .list h2 {
-            font-size: 24px;
-            margin: 10px 0;
-        }
-        h2:hover {
-            color: yellow;
-        }
-        p a:hover {
-            background-color: #ff9800;
-            color: #0d1321;
-            transform: scale(1.05);
-            transition: background-color 0.3s ease, transform 0.3s ease;
-        }
-        p a {
-            padding: 10px 15px;
-            background-color: #c5832b;
-            color: #355E3b;
-            border-radius: 15%;
-        }
-        .list:hover p {
-            color: white;
-        }
-        .list:hover > :not(:hover) {
-            filter: blur(1px);
-            opacity: 0.5;
-        }
-        .sidebar {
-            position: fixed;
-            left: 0;
-            top: 0;
-            width: 250px;
-            height: 100%;
-            background-color: #20214d;
-            color: white;
-            padding-top: 20px;
-            display: flex;
-            flex-direction: column;
-        }
-        .sidebar a {
-            display: block;
-            color: white;
-            padding: 15px;
-            text-decoration: none;
-            font-family: "Josefin Sans", sans-serif;
-        }
-        .sidebar a:hover {
-            background-color: #c5832b;
-        }
-        .main-content {
-            margin-left: 250px;
-        }
-        .AOT:hover img {
-            content: url(./images/AoT%20GIF.gif);
-        }
+/* Reset body styling */
+body {
+    font-family: "Bebas Neue", sans-serif;
+    background-color: #0d1321;
+    color: white;
+    margin: 0;
+    padding: 0;
+}
 
-        .BC:hover img {
-            content: url(./images/BC%20GIF.gif);
-        }
+/* Common paragraph styling */
+p {
+    font-family: "Josefin Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
 
-        .DN:hover img {
-            content: url(./images/DN%20GIF.gif);
-        }
+/* Heading styles */
+h1 {
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: bold;
+    color: #ffffff;
+    font-size: 36px;
+    margin: 0;
+}
 
-        .DB:hover img {
-            content: url(./images/DB%20GIF.gif);
-        }
+h1:hover {
+    color: #51e668;
+}
+/* Container to hold navbar and heading in a row */
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background-color: #20214d;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
 
-            .CaseClosed:hover img {
-            content: url(./images/case%20closed%20gif.gif);
-        }
+/* Navbar styles */
+.navbar {
+    display: flex;
+    gap: 20px;
+}
 
-            .Crybaby:hover img {
-            content: url(./images/Crybaby.gif);
-        }
+.nav-item {
+    color: #83818c;
+    text-decoration: none;
+    font-size: 18px;
+    transition: 0.3s;
+}
 
-        .Gintama:hover img {
-            content: url(./images/Gintoki.gif);
-        }
+.nav-item:hover {
+    color: #ffffff;
+}
 
-        .JoJo1:hover img {
-            content: url(./images/Joseph%20gif.gif);
-        }
+/* Anime list container */
+.list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+    gap: 20px;
+}
+.list > div,
+.anime-entry {
+    background-color: #c5832b;
+    border-radius: 10px;
+    padding: 20px;
+    width: 300px;
+    margin: 15px;
+    text-align: center;
+    color: white;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
 
-        .JoJo3:hover img {
-            content: url(./images/Jotaro%20gif.gif);
-        }
+.list > div:hover,
+.anime-entry:hover {
+    transform: scale(1.05);
+    background-color: #ff9800;
+}
 
-        .JoJo4:hover img {
-            content: url(./images/Josuke.gif);
-        }
+/* Anime images */
+.list img,
+.anime-entry img {
+    height: 278px;
+    width: auto;
+    max-width: 100%;
+    border-radius: 15%;
+    border-top: 5px solid black;
+    border-bottom: 5px solid black;
+}
 
-        .JoJo5:hover:hover img {
-            content: url(./images/Giorno.gif);
-        }
+/* Anime titles */
+.list h2,
+.anime-entry h2 {
+    font-size: 24px;
+    margin: 10px 0;
+}
 
-        .OnePiece:hover img {
-            content: url(./images/Gear%205.gif);
-        }
-        
-        @media (max-width: 768px) {
-            .content h1 {
-                font-size: 2em;
+.list h2:hover,
+.anime-entry h2:hover {
+    color: yellow;
+}
+
+/* Link styling */
+p a {
+    padding: 10px 15px;
+    background-color: #c5832b;
+    color: #355E3b;
+    border-radius: 15%;
+    text-decoration: none;
+}
+
+p a:hover {
+    background-color: #ff9800;
+    color: #0d1321;
+    transform: scale(1.05);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Hover effects for GIFs */
+.AOT:hover img {
+    content: url(./images/AoT\ GIF.gif);
+}
+
+.BC:hover img {
+    content: url(./images/BC\ GIF.gif);
+}
+
+.DN:hover img {
+    content: url(./images/DN\ GIF.gif);
+}
+
+.DB:hover img {
+    content: url(./images/DB%20GIF.gif);
+}
+
+/* Miscellaneous GIF hover effects */
+.CaseClosed:hover img {
+    content: url(./images/case\ closed\ gif.gif);
+}
+
+.Crybaby:hover img {
+    content: url(./images/Crybaby.gif);
+}
+
+.Gintama:hover img {
+    content: url(./images/Gintoki.gif);
+}
+
+.JoJo1:hover img {
+    content: url(./images/Joseph\ gif.gif);
+}
+
+.JoJo3:hover img {
+    content: url(./images/Jotaro\ gif.gif);
+}
+
+.JoJo4:hover img {
+    content: url(./images/Josuke.gif);
+}
+
+.JoJo5:hover img {
+    content: url(./images/Giorno.gif);
+}
+
+.OnePiece:hover img {
+    content: url(./images/Gear\ 5.gif);
+}
+
+.list:hover > :not(:hover) {
+    filter: blur(1px);
+    opacity: 0.5;
+}
+@media (max-width: 768px) {
+            .header-container {
+                flex-direction: column;
+                text-align: center;
             }
-            .content p {
-                font-size: 1em;
+
+            h1 {
+                font-size: 28px;
+            }
+
+            .navbar {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .nav-item {
+                font-size: 16px;
+            }
+
+            .list > div,
+            .anime-entry {
+                width: 100%;
+                padding: 10px;
+                margin: 10px 0;
+            }
+
+            .list img,
+            .anime-entry img {
+                height: auto;
+                max-width: 100%;
             }
         }
 
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 24px;
+            }
+
+            .nav-item {
+                font-size: 14px;
+            }
+
+            .anime-entry {
+                padding: 15px;
+                font-size: 14px;
+            }
+
+            p a {
+                font-size: 14px;
+                padding: 8px 12px;
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .header-container {
+                padding: 20px 100px;
+            }
+
+            .navbar {
+                gap: 30px;
+            }
+
+            .nav-item {
+                font-size: 20px;
+            }
+
+            .list > div,
+            .anime-entry {
+                width: 300px;
+            }
+            }
     </style>
 </head>
 <body>
-    <div class="main-content">
-        <div class="sidebar">
-            <a href="./index.html">Back to main page</a>
-            <br>
-            <a href="./Sci-Fi.html">Science Fiction</a>
-            <a href="./Romance.html">Romance</a>
-            <a href="./Comedy.html">Comedy</a>
-        </div>
-        
-        <div class="sticky-header">
-            <h1 draggable="true">Shonen Anime Recommendations</h1>
-        </div>
-        <hr>
-
-        <div class="list">
-            <div class="AOT">
-                <h2>Attack on Titan</h2>
-                <img src="./images/Attack on Titan.jpg" alt="Attack on Titan">
-                <p></p>
-                <p><a href="./AoT.html">More info</a></p>
-            </div>
-            <div class="BC">
-                <h2>Black Clover</h2>
-                <img src="./images/Black Clover.jpg" alt="Black Clover">
-                <p></p>
-                <p><a href="https://myanimelist.net/anime/34572/Black_Clover">More info</a></p>
-            </div>
-            <div class="DN">
-                <h2>Death Note</h2>
-                <img src="./images/Death Note.jpg" alt="Death Note">
-                <p></p>
-                <p><a href="https://myanimelist.net/anime/1535/Death_Note">More info</a></p>
-            </div>
-            <div class="DB">
-                <h2>Dragon Ball</h2>
-                <img src="./images/Dragon Ball.jpg" alt="Dragon Ball">
-                <p>Follow the adventures of Goku, a Saiyan warrior, as he trains in martial arts and defends Earth from powerful enemies while searching for the mystical Dragon Balls.</p>
-                <p><a href="https://myanimelist.net/anime/223/Dragon_Ball">More info</a></p>
-            </div>
-            <div class="CaseClosed">
-                <h2>Detective Conan</h2>
-                <img src="./images/Meitantei Conan.jpg" alt="Detective Conan">
-                <p>Teen detective Shinichi Kudo is transformed into a child while investigating a mysterious organization. Using his new identity as Conan Edogawa, he continues solving cases to find a cure.</p>
-                <p><a href="https://myanimelist.net/anime/235/Meitantei_Conan">More info</a></p>
-            </div>
-            <div class="Crybaby">
-                <h2>Devilman Crybaby</h2>
-                <img src="./images/Devilman.jpg" alt="Devilman">
-                <p>Akira Fudo merges with a demon to save humanity from evil. As a "Devilman," he battles other demons, facing the brutal reality of both human and demonic nature.</p>
-                <p><a href="https://myanimelist.net/anime/35120/Devilman__Crybaby">More info</a></p>
-            </div>
-            <div class="Gintama">
-                <h2>Gintama</h2>
-                <img src="./images/Gintama.jpg" alt="Gintama">
-                <p>In a futuristic Edo under alien rule, samurai Gintoki Sakata fights to keep his way of life while handling bizarre and often hilarious situations with his companions.</p>
-                <p><a href="https://myanimelist.net/anime/918/Gintama">More info</a></p>
-            </div>
-            <div class="JoJo1">
-                <h2>JoJo's Bizarre Adventure: Part 1 & 2</h2>
-                <img src="./images/JJBA4.jpg" alt="JoJo's Bizarre Adventure Part 1 & 2">
-                <p>The adventures of Jonathan Joestar and Joseph Joestar, each battling supernatural forces and family enemies in a unique blend of action and style.</p>
-                <p><a href="https://myanimelist.net/anime/14719/JoJo_no_Kimyou_na_Bouken_TV">More info</a></p>
-            </div>
-            <div class="JoJo3">
-                <h2>JoJo's Bizarre Adventure: Part 3 (Stardust Crusaders)</h2>
-                <img src="./images/JJBA3.jpg" alt="JoJo's Bizarre Adventure Part 3">
-                <p>Jotaro Kujo and his allies embark on a journey to Egypt to defeat the sinister Dio Brando, utilizing mysterious powers known as Stands.</p>
-                <p><a href="https://myanimelist.net/anime/20899/JoJo_no_Kimyou_na_Bouken_Stardust_Crusaders">More info</a></p>
-            </div>
-            <div class="JoJo4">
-                <h2>JoJo's Bizarre Adventure: Part 4 (Diamond is Unbreakable)</h2>
-                <img src="./images/JJBA4.jpg" alt="JoJo's Bizarre Adventure Part 4">
-                <p>In a quiet town plagued by serial killings, Josuke Higashikata and his friends use their Stand powers to protect the peace and uncover dark secrets.</p>
-                <p><a href="https://myanimelist.net/anime/31933/JoJo_no_Kimyou_na_Bouken__Diamond_wa_Kudakenai">More info</a></p>
-            </div>
-            <div class="JoJo5">
-                <h2>JoJo's Bizarre Adventure: Part 5 (Golden Wind)</h2>
-                <img src="./images/JJBA5.jpg" alt="JoJo's Bizarre Adventure Part 5">
-                <p>Giorno Giovanna, son of Dio, aspires to become the head of the mafia to bring justice to his country. With the help of his Stand, he confronts powerful enemies in Italy.</p>
-                <p><a href="https://myanimelist.net/anime/37991/JoJo_no_Kimyou_na_Bouken_Part_5__Ougon_no_Kaze">More info</a></p>
-            </div>
-            <div class="OnePiece">
-                <h2>One Piece</h2>
-                <img src="./images/One Piece.jpg" alt="One Piece">
-                <p>Monkey D. Luffy and his pirate crew sail across the seas in search of the legendary One Piece treasure. Their journey is filled with battles, friendships, and unbreakable dreams.</p>
-                <p><a href="https://myanimelist.net/anime/21/One_Piece">More info</a></p>
-            </div>
-            <p>&copy; 2024 Anime Recommendations. All rights reserved.</p>
+    <div class="header-container">
+        <h1>Shonen Anime Recommendations</h1>
+        <div class="navbar">
+            <a class="nav-item" href="./index.html">Back to Main Page</a>
+            <a class="nav-item" href="./Sci-Fi.html">Science Fiction</a>
+            <a class="nav-item" href="./Romance.html">Romance</a>
+            <a class="nav-item" href="./Comedy.html">Comedy</a>
         </div>
     </div>
-
+    <div class="list">
+        <div class="anime-entry AOT">
+            <h2>Attack on Titan</h2>
+            <img src="./images/Attack on Titan.jpg" alt="Attack on Titan">
+            <p></p>
+            <p><a href="./AoT.html">More info</a></p>
+        </div>
+        <div class="anime-entry BC">
+            <h2>Black Clover</h2>
+            <img src="./images/Black Clover.jpg" alt="Black Clover">
+            <p></p>
+            <p><a href="https://myanimelist.net/anime/34572/Black_Clover">More info</a></p>
+        </div>
+        <div class="anime-entry DN">
+            <h2>Death Note</h2>
+            <img src="./images/Death Note.jpg" alt="Death Note">
+            <p></p>
+            <p><a href="https://myanimelist.net/anime/1535/Death_Note">More info</a></p>
+        </div>
+        <div class="anime-entry DB">
+            <h2>Dragon Ball</h2>
+            <img src="./images/Dragon Ball.jpg" alt="Dragon Ball">
+            <p>Follow the adventures of Goku, a Saiyan warrior, as he trains in martial arts and defends Earth from powerful enemies while searching for the mystical Dragon Balls.</p>
+            <p><a href="https://myanimelist.net/anime/223/Dragon_Ball">More info</a></p>
+        </div>
+        <div class="anime-entry CaseClosed">
+            <h2>Detective Conan</h2>
+            <img src="./images/Meitantei Conan.jpg" alt="Detective Conan">
+            <p>Teen detective Shinichi Kudo is transformed into a child while investigating a mysterious organization. Using his new identity as Conan Edogawa, he continues solving cases to find a cure.</p>
+            <p><a href="https://myanimelist.net/anime/235/Meitantei_Conan">More info</a></p>
+        </div>
+        <div class="anime-entry Crybaby">
+            <h2>Devilman Crybaby</h2>
+            <img src="./images/Devilman.jpg" alt="Devilman">
+            <p>Akira Fudo merges with a demon to save humanity from evil. As a "Devilman," he battles other demons, facing the brutal reality of both human and demonic nature.</p>
+            <p><a href="https://myanimelist.net/anime/35120/Devilman__Crybaby">More info</a></p>
+        </div>
+        <div class="anime-entry Gintama">
+            <h2>Gintama</h2>
+            <img src="./images/Gintama.jpg" alt="Gintama">
+            <p>In a futuristic Edo under alien rule, samurai Gintoki Sakata fights to keep his way of life while handling bizarre and often hilarious situations with his companions.</p>
+            <p><a href="https://myanimelist.net/anime/918/Gintama">More info</a></p>
+        </div>
+        <div class="anime-entry JoJo1">
+            <h2>JoJo's Bizarre Adventure: Part 1 & 2</h2>
+            <img src="./images/JJBA4.jpg" alt="JoJo's Bizarre Adventure Part 1 & 2">
+            <p>The adventures of Jonathan Joestar and Joseph Joestar, each battling supernatural forces and family enemies in a unique blend of action and style.</p>
+            <p><a href="https://myanimelist.net/anime/14719/JoJo_no_Kimyou_na_Bouken_TV">More info</a></p>
+        </div>
+        <div class="anime-entry JoJo3">
+            <h2>JoJo's Bizarre Adventure: Part 3 (Stardust Crusaders)</h2>
+            <img src="./images/JJBA3.jpg" alt="JoJo's Bizarre Adventure Part 3">
+            <p>Jotaro Kujo and his allies embark on a journey to Egypt to defeat the sinister Dio Brando, utilizing mysterious powers known as Stands.</p>
+            <p><a href="https://myanimelist.net/anime/20899/JoJo_no_Kimyou_na_Bouken_Stardust_Crusaders">More info</a></p>
+        </div>
+        <div class="anime-entry JoJo4">
+            <h2>JoJo's Bizarre Adventure: Part 4 (Diamond is Unbreakable)</h2>
+            <img src="./images/JJBA4.jpg" alt="JoJo's Bizarre Adventure Part 4">
+            <p>In a quiet town plagued by serial killings, Josuke Higashikata and his friends use their Stand powers to protect the peace and uncover dark secrets.</p>
+            <p><a href="https://myanimelist.net/anime/31933/JoJo_no_Kimyou_na_Bouken__Diamond_wa_Kudakenai">More info</a></p>
+        </div>
+        <div class="anime-entry JoJo5">
+            <h2>JoJo's Bizarre Adventure: Part 5 (Golden Wind)</h2>
+            <img src="./images/JJBA5.jpg" alt="JoJo's Bizarre Adventure Part 5">
+            <p>Giorno Giovanna, son of Dio, aspires to become the head of the mafia to bring justice to his country. With the help of his Stand, he confronts powerful enemies in Italy.</p>
+            <p><a href="https://myanimelist.net/anime/37991/JoJo_no_Kimyou_na_Bouken_Part_5__Ougon_no_Kaze">More info</a></p>
+        </div>
+        <div class="anime-entry OnePiece">
+            <h2>One Piece</h2>
+            <img src="./images/One Piece.jpg" alt="One Piece">
+            <p>Monkey D. Luffy and his pirate crew sail across the seas in search of the legendary One Piece treasure. Their journey is filled with battles, friendships, and unbreakable dreams.</p>
+            <p><a href="https://myanimelist.net/anime/21/One_Piece">More info</a></p>
+        </div>
+    </div>
+    <p>&copy; 2024 Anime Recommendations. All rights reserved.</p>
 </body>
 </html>

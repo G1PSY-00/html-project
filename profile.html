@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Profile</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Josefin+Sans:wght@400&display=swap" rel="stylesheet">
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-brands/css/uicons-brands.css'>
+    <style>
+        body {
+            font-family: "Bebas Neue", sans-serif;
+            background-size: 100%;
+            color: white;
+            margin: 0;
+            padding: 0;
+        }
+        h1 {
+            font-family: "Bebas Neue", sans-serif;
+            font-weight: 500;
+            color: #c5832b;
+            text-align: center;
+            font-weight: bold;
+            font-size: 55px;
+            margin-top: 50px;
+            text-shadow: #20214d;
+        }
+        .navbar {
+            background-color: #20214d;
+            padding: 10px;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        .navbar a {
+            color: white;
+            padding: 14px 20px;
+            text-decoration: none;
+            font-family: "Josefin Sans", sans-serif;
+            font-size: 18px;
+        }
+        .navbar a:hover {
+            background-color: #c5832b;
+        }
+        .profile-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            margin-top: 50px;
+        }
+        .profile-container img {
+            border-radius: 50%;
+            border: 5px solid #355E3b;
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            margin-bottom: 20px;
+        }
+        .profile-info {
+            text-align: center;
+            max-width: 800px;
+            background-color: #20214d;
+            padding: 30px;
+            border-radius: 10px;
+            margin: 20px;
+        }
+        .profile-info p {
+            font-family: "Josefin Sans", sans-serif;
+            font-size: 18px;
+            line-height: 1.6;
+            color: #ccc;
+        }
+        .profile-info h2 {
+            font-family: "Bebas Neue", sans-serif;
+            font-size: 30px;
+            color: #ff9800;
+            margin-bottom: 20px;
+        }
+        .profile-info {
+            text-align: center;
+            max-width: 800px;
+            background-color: rgba(32, 33, 77, 0.6);
+            padding: 30px;
+            border-radius: 15px;
+            margin: 20px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        }
+
+        .socials a {
+            font-size: 40px; 
+            color: white;
+            margin: 10px; 
+            text-decoration: none; 
+            transition: transform 0.3s ease, color 0.3s ease; 
+        }
+
+        .socials a:hover {
+            transform: scale(1.2) rotate(15deg);
+            color: #c5832b;
+        }
+
+        .socials {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .video-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -2;
+        }
+    </style>
+</head>
+<body>
+    <video class="video-background" autoplay loop muted aria-label="Attack on Titan Background Video">
+        <source src="./images/Cyberpunk 2077 Night City 4K animated wallpaper.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <div class="navbar">
+        <a href="index.html">Home</a>
+        <a href="Shonen.html">Shonen</a>
+        <a href="Romance.html">Romance</a>
+        <a href="Sci-Fi.html">Sci-Fi</a>
+    </div>
+
+    <div class="profile-container">
+        <h1>About me</h1>
+        <img src="images/Joshee.jpg" alt="Profile Picture">
+        <div class="profile-info">
+            <h2>Joshua Neil</h2>
+            <p>Hi! My name is Joshua. I'm currently 18 years old, excited about the adventures that adulthood brings. I'm passionate about being a programmer. Right now, I'm focused on improving my programming skills.</p>
+            <div class="socials">
+                <a href="https://www.facebook.com/joshuaneil.banate.5" target="_blank">
+                    <i class="fi fi-brands-facebook"></i>
+                </a>
+
+                <a href="https://www.instagram.com/josheeneil/profilecard/?igsh=MW5zamhsYmh0dDZ5Nw==" target="_blank">
+                    <i class="fi fi-brands-instagram"></i>
+                </a>
+
+                <a href="https://g1psy-00.github.io/html-project/" target="_blank">
+                    <i class="fi fi-brands-github"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
