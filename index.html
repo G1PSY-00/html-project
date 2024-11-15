@@ -10,6 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
     <style>
+        /* Base styles */
         body {
             font-family: "Bebas Neue", sans-serif;
             background-color: #0d1321;
@@ -17,111 +18,240 @@
             margin: 0;
             padding: 0;
         }
+
+        /* Common paragraph styling */
         p {
             font-family: "Josefin Sans", sans-serif;
             font-weight: 400;
+            font-style: normal;
+            line-height: 1.6;
         }
+
+        /* Heading styles */
         h1 {
             font-family: "Bebas Neue", sans-serif;
-            color: #355E3b;
-            text-align: center;
             font-weight: bold;
-            font-size: 55px;
+            color: #ffffff;
+            font-size: 36px;
+            margin: 0;
         }
+
         h1:hover {
             color: #51e668;
         }
+
+        /* Section separator */
         hr {
             border: 3px solid #20214d;
+            margin-top: 20px;
         }
+
+        /* Container to hold navbar and heading in a row */
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 50px;
+            background-color: #20214d;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Navbar styles */
+        .navbar {
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav-item {
+            color: #83818c;
+            text-decoration: none;
+            font-size: 18px;
+            transition: 0.3s;
+        }
+
+        .nav-item:hover {
+            color: #ffffff;
+        }
+
+        /* Anime list container */
         .list {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
             padding: 20px;
+            gap: 20px; /* Ensure spacing between entries */
         }
-        .list > div {
+
+        /* Individual anime entry styling */
+        .list > div,
+        .anime-entry {
             background-color: #c5832b;
-            width: 400px;
-            margin: 15px;
+            border-radius: 10px;
             padding: 20px;
-            border-radius: 5%;
+            width: 300px;
+            margin: 15px;
             text-align: center;
             color: white;
             transition: transform 0.3s ease, background-color 0.3s ease;
         }
-        .list > div:hover {
+
+        .list > div:hover,
+        .anime-entry:hover {
             transform: scale(1.05);
             background-color: #ff9800;
         }
-        .list img {
-            height: 300px; 
-            width: auto; 
-            max-width: 100%; 
-            border-bottom: 5px solid black;
-            border-top: 5px solid black;
+
+        /* Anime images */
+        .list img,
+        .anime-entry img {
+            height: 278px;
+            width: auto;
+            max-width: 100%;
             border-radius: 15%;
+            border-top: 5px solid black;
+            border-bottom: 5px solid black;
         }
-        .list h2 {
-            font-size: 26px;
+
+        /* Anime titles */
+        .list h2,
+        .anime-entry h2 {
+            font-size: 24px;
             margin: 10px 0;
-            color: white;
         }
-        h2:hover {
+
+        .list h2:hover,
+        .anime-entry h2:hover {
             color: yellow;
         }
-        .nav-bar {
-            display: flex;
-            justify-content: center;
-            background-color: #20214d;
-            padding: 20px;
-        }
-        .nav-bar a {
-            margin: 0 20px;
-            color: #ffffff;
-            text-decoration: none;
-            font-size: 20px;
+
+        /* Link styling */
+        p a {
             padding: 10px 15px;
-            border-radius: 5px;
+            background-color: #c5832b;
+            color: #355E3b;
+            border-radius: 15%;
+            text-decoration: none;
         }
-        .nav-bar a:hover {
-            color: black;
+
+        p a:hover {
             background-color: #ff9800;
-            transition: background-color 0.3s ease;
+            color: #0d1321;
+            transform: scale(1.05);
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        /* Media Queries for responsiveness */
+
+        /* For devices with a screen width of 768px or smaller (e.g., tablets and smartphones) */
+        @media (max-width: 768px) {
+            /* Adjust header layout */
+            .header-container {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            h1 {
+                font-size: 28px;
+            }
+
+            /* Adjust navbar items to stack vertically */
+            .navbar {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .nav-item {
+                font-size: 16px;
+            }
+
+            /* Adjust anime entries to use the full width */
+            .list > div,
+            .anime-entry {
+                width: 100%;
+                padding: 10px;
+                margin: 10px 0;
+            }
+
+            /* Adjust anime image size */
+            .list img,
+            .anime-entry img {
+                height: auto;
+                max-width: 100%;
+            }
+        }
+
+        /* For devices with a screen width of 480px or smaller (e.g., mobile phones) */
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 24px;
+            }
+
+            .nav-item {
+                font-size: 14px;
+            }
+
+            .anime-entry {
+                padding: 15px;
+                font-size: 14px;
+            }
+
+            p a {
+                font-size: 14px;
+                padding: 8px 12px;
+            }
+        }
+
+        /* For larger screens (like desktops or large tablets) */
+        @media (min-width: 1024px) {
+            .header-container {
+                padding: 20px 100px;
+            }
+
+            .navbar {
+                gap: 30px;
+            }
+
+            .nav-item {
+                font-size: 20px;
+            }
+
+            .list > div,
+            .anime-entry {
+                width: 300px;
+            }
         }
     </style>
 </head>
 <body>
-    <h1>Welcome to My Anime Recommendations</h1>
-    <hr>
+    <div class="header-container">
+        <h1>My Anime Recommendations</h1>
+        <div class="navbar">
+            <a class="nav-item" href="./Shonen.html">Shonen</a>
+            <a class="nav-item" href="./Sci-Fi.html">Sci-Fi</a>
+            <a class="nav-item" href="./Romance.html">Romance</a>
+            <a class="nav-item" href="./Comedy.html">Comedy</a>
+            <a class="nav-item" href="#">About me</a>
+        </div>
+    </div>
     <div class="list">
         <div class="anime-entry">
             <h2>Mobile Suit Gundam (Universal Century Timeline)</h2>
             <img src="./images/RX 78 2.gif" alt="RX 78 2">
-            <p>Universal Century Gundam is worth watching for its deep and complex storyline that explores the harsh realities of war and its impact on humanity. 
-                The series features richly developed characters and political intrigue that add layers of depth to the narrative.</p>
+            <p>Universal Century Gundam is worth watching for its deep and complex storyline that explores the harsh realities of war and its impact on humanity. The series features richly developed characters and political intrigue that add layers of depth to the narrative.</p>
         </div>
         
         <div class="anime-entry">
             <h2>Tengen Toppa Gurren Lagann</h2>
             <img src="./images/GIGA DRILL.gif" alt="giga drill">
-            <p>Another Mecha series worth watching is Tengen Toppa Gurren Lagann. 
-                It's renowned for its story about teamwork. With a unique visual style that sets it apart, its blend of humor, emotion, and epic scale makes it a standout in the mecha genre.</p>
+            <p>Another Mecha series worth watching is Tengen Toppa Gurren Lagann. It's renowned for its story about teamwork. With a unique visual style that sets it apart, its blend of humor, emotion, and epic scale makes it a standout in the mecha genre.</p>
         </div>
         
         <div class="anime-entry">
             <h2>Detective Conan</h2>
             <img src="./images/DC.gif" alt="Detective Conan">
-            <p>Detective Conan is great for its clever mysteries. Each case has detailed clues and surprises that keep you guessing until the end. 
-                The show's well-crafted plots make solving the puzzles alongside the main character both fun and satisfying.</p>
+            <p>Detective Conan is great for its clever mysteries. Each case has detailed clues and surprises that keep you guessing until the end. The show's well-crafted plots make solving the puzzles alongside the main character both fun and satisfying.</p>
         </div>
     </div>
     <hr>
-    <div class="nav-bar">
-        <a href="Shonen.html">Shonen</a>
-        <a href="Sci-Fi.html">Sci-Fi</a>
-        <a href="Romance.html">Romance</a>
-        <a href="Comedy.html">Comedy</a>
-    </div>
 </body>
 </html>
