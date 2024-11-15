@@ -6,12 +6,11 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
     <link rel="icon" href="favicon.ico">
     <title>Sci-Fi Anime Recommendations</title>
     <style>
+        /* Reset body styling */
         body {
             font-family: "Bebas Neue", sans-serif;
             background-color: #0d1321;
@@ -19,73 +18,112 @@
             margin: 0;
             padding: 0;
         }
-        p  {
+
+        /* Common paragraph styling */
+        p {
             font-family: "Josefin Sans", sans-serif;
             font-optical-sizing: auto;
             font-weight: 400;
             font-style: normal;
         }
+
+        /* Heading styles */
         h1 {
             font-family: "Bebas Neue", sans-serif;
-            font-weight: 500;
-            font-style: normal;
-            color: #355E3b;
-            text-align: center;
             font-weight: bold;
-            font-size: 55px;
-            
+            color: #ffffff;
+            font-size: 36px;
+            margin: 0;
         }
+
         h1:hover {
             color: #51e668;
         }
 
-        hr {
-            border: 3px solid #20214d;
+        /* Container to hold navbar and heading in a row */
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 50px;
+            background-color: #20214d;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
 
+        /* Navbar styles */
+        .navbar {
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav-item {
+            color: #83818c;
+            text-decoration: none;
+            font-size: 18px;
+            transition: 0.3s;
+        }
+
+        .nav-item:hover {
+            color: #ffffff;
+        }
+
+        /* Anime list container */
         .list {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
             padding: 20px;
+            gap: 20px;
         }
 
-        .list > div {
-            display: inline-block;
+        .list > div,
+        .anime-entry {
             background-color: #c5832b;
+            border-radius: 10px;
+            padding: 20px;
             width: 300px;
             margin: 15px;
-            padding: 15px;
-            border-radius: 5%;
             text-align: center;
             color: white;
-            vertical-align: top;
-            flex-wrap: wrap;
-        }
-        .list > div {
             transition: transform 0.3s ease, background-color 0.3s ease;
         }
 
-        .list > div:hover {
+        .list > div:hover,
+        .anime-entry:hover {
             transform: scale(1.05);
-            background-color: #ff9800;}
-        .list img {
-            height: 278px; 
-            width: auto; 
-            max-width: 100%; 
-            border-bottom: 5px solid black;
-            border-top: 5px solid black;
-            border-radius: 15%;
-            flex-wrap: wrap;
+            background-color: #ff9800;
         }
 
-        .list h2 {
+        /* Anime images */
+        .list img,
+        .anime-entry img {
+            height: 278px;
+            width: auto;
+            max-width: 100%;
+            border-radius: 15%;
+            border-top: 5px solid black;
+            border-bottom: 5px solid black;
+        }
+
+        /* Anime titles */
+        .list h2,
+        .anime-entry h2 {
             font-size: 24px;
             margin: 10px 0;
-        
         }
-        h2:hover {
+
+        .list h2:hover,
+        .anime-entry h2:hover {
             color: yellow;
+        }
+
+        /* Link styling */
+        p a {
+            padding: 10px 15px;
+            background-color: #c5832b;
+            color: #355E3b;
+            border-radius: 15%;
+            text-decoration: none;
         }
 
         p a:hover {
@@ -95,129 +133,95 @@
             transition: background-color 0.3s ease, transform 0.3s ease;
         }
 
-
-        .list p {
-            font-size: 16px;
-            color: #ccc;
-        }
-        .list:hover p{
-            color: white;
-        }
-        .list:hover > :not(:hover){
-            filter: blur(5px);
+        /* Miscellaneous hover effects */
+        .list:hover > :not(:hover) {
+            filter: blur(1px);
             opacity: 0.5;
         }
 
-        /* Hover effect for images */
-        .CowboyBebop:hover img {
-            content: url(./images/bebop%20gif.gif);
-        }
-
-        .CodeGeass:hover img {
-            content: url(./images/Lelouch.gif);
-        }
-
-        .Evangelion:hover img {
-            content: url(./images/Eva%20rebuild.gif);
-        }
-
-        .TTGL:hover img {
-            content: url(./images/Kamina.gif);
-        }
-
-        .ZZ:hover img {
-            content: url(./images/ZZ.gif);
-        }
-
-        .Hathaway:hover img {
-            content: url(./images/midflight%20battle.gif);
-        }
-
-        .Unicorn:hover img {
-            content: url(./images/RX%200%20aka%20unicorn.gif);
-        }
-
-        .Gundam_UC79:hover img {
-            content: url(./images/78-2.gif);
-        }
-
-        .Stardust:hover img {
-            content: url(./images/GP02.gif);
-        }
-
-        .MS08Team:hover img {
-            content: url(./images/ez%208.gif);
-        }
-
-        .Origin:hover img {
-            content: url(./images/battle%20of%20loum.gif);
-        }
-
-        .Thunderbolt:hover img {
-            content: url(./images/FA%20GUNDAM.gif);
-        }
-
-        .Zeta:hover img {
-            content: url(./images/ZETAGUNDAM.gif);
-        }
-        p a{
-            padding: 10px 15px;
-            background-color: #c5832b;
-            color: white;
-            border-radius: 15%;
-            color: #355E3b;
-        }
-        .sticky-header {
-            position: sticky;
-            top: 0;
-            background-color: #0d1321;
-            padding-top: 10px;
-            z-index: 1000;
-        }
-        .sidebar {
-            position: fixed;
-            left: 0;
-            top: 0;
-            width: 250px;
-            height: 100%;
-            background-color: #20214d;
-            color: white;
-            padding-top: 20px;
-            display: flex;
-            flex-direction: column;
+        @media (max-width: 768px) {
+            .header-container {
+                flex-direction: column;
+                text-align: center;
             }
 
-        .sidebar a {
-            display: block;
-            color: white;
-            padding: 15px;
-            text-decoration: none;
-            font-family: "Josefin Sans", sans-serif;
+            h1 {
+                font-size: 28px;
             }
 
-        .sidebar a:hover {
-            background-color: #c5832b;
+            .navbar {
+                flex-direction: column;
+                gap: 15px;
             }
-        .main-content {
-            margin-left: 250px;
+
+            .nav-item {
+                font-size: 16px;
             }
+
+            .list > div,
+            .anime-entry {
+                width: 100%;
+                padding: 10px;
+                margin: 10px 0;
+            }
+
+            .list img,
+            .anime-entry img {
+                height: auto;
+                max-width: 100%;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 24px;
+            }
+
+            .nav-item {
+                font-size: 14px;
+            }
+
+            .anime-entry {
+                padding: 15px;
+                font-size: 14px;
+            }
+
+            p a {
+                font-size: 14px;
+                padding: 8px 12px;
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .header-container {
+                padding: 20px 100px;
+            }
+
+            .navbar {
+                gap: 30px;
+            }
+
+            .nav-item {
+                font-size: 20px;
+            }
+
+            .list > div,
+            .anime-entry {
+                width: 300px;
+            }
+        }
     </style>
 </head>
 <body>
-    <div class="main-content">
-    <div class="sidebar">
-        <a href="./index.html">Back to main page</a>
-        <br>
-        <a href="./Shonen.html">Shonen</a>
-        <a href="./Romance.html">Romance</a>
-        <a href="./Comedy.html">Comedy</a>
+    <div class="header-container">
+        <h1>Sci-Fi Anime Recommendations</h1>
+        <div class="navbar">
+            <a class="nav-item" href="./index.html">Back to Main Page</a>
+            <a class="nav-item" href="./Shonen.html">Shonen</a>
+            <a class="nav-item" href="./Romance.html">Romance</a>
+            <a class="nav-item" href="./Comedy.html">Comedy</a>
+        </div>
     </div>
-    
-    <div class="sticky-header">
-    <h1 draggable="true">Science Fiction</h1>
-    </div>
-    <hr>
-
     <div class="list">
         <div class="CowboyBebop">
             <h2>Cowboy Bebop</h2>
@@ -297,9 +301,6 @@
             <p>In UC 0087, after the One Year War, the Earth Federation's Titans are formed to hunt remaining Zeon forces, but their oppressive tactics spark the rise of the AEUG. Seventeen-year-old Kamille Bidan, living near a Titan base in Green Noa, gets into trouble for assaulting a Titan officer. When he steals a Titan prototype Gundam during an attack led by former Zeon ace Char Aznable, now AEUG pilot Quattro Bajeena, he is drawn into a dangerous conflict.</p>
         </div>
     </div>
-    </div>
-    <hr>
-    
-    <p><a href="./index.html">Back to Main Page</a></p>
+    <p>&copy; 2024 Anime Recommendations. All rights reserved.</p>
 </body>
 </html>
