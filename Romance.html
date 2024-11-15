@@ -10,6 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
     <style>
+        /* Reset body styling */
         body {
             font-family: "Bebas Neue", sans-serif;
             background-color: #0d1321;
@@ -17,251 +18,342 @@
             margin: 0;
             padding: 0;
         }
-        p  {
+
+        /* Common paragraph styling */
+        p {
             font-family: "Josefin Sans", sans-serif;
             font-optical-sizing: auto;
             font-weight: 400;
             font-style: normal;
         }
+
+        /* Heading styles */
         h1 {
             font-family: "Bebas Neue", sans-serif;
-            color: #355E3b;
-            text-align: center;
             font-weight: bold;
-            font-size: 55px;
+            color: #ffffff;
+            font-size: 36px;
+            margin: 0;
         }
+
         h1:hover {
             color: #51e668;
         }
-        hr {
-            border: 3px solid #20214d;
+
+        /* Container to hold navbar and heading in a row */
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 50px;
+            background-color: #20214d;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
+
+        /* Navbar styles */
+        .navbar {
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav-item {
+            color: #83818c;
+            text-decoration: none;
+            font-size: 18px;
+            transition: 0.3s;
+        }
+
+        .nav-item:hover {
+            color: #ffffff;
+        }
+
+        /* Anime list container */
         .list {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
             padding: 20px;
+            gap: 20px;
         }
-        .list > div {
-            display: inline-block;
+
+        .list > div,
+        .anime-entry {
             background-color: #c5832b;
+            border-radius: 10px;
+            padding: 20px;
             width: 300px;
             margin: 15px;
-            padding: 15px;
-            border-radius: 5%;
             text-align: center;
             color: white;
-            vertical-align: top;
             transition: transform 0.3s ease, background-color 0.3s ease;
         }
-        .list > div:hover {
+
+        .list > div:hover,
+        .anime-entry:hover {
             transform: scale(1.05);
             background-color: #ff9800;
         }
-        .list img {
-            height: 278px; 
-            width: auto; 
-            max-width: 100%; 
-            border-bottom: 5px solid black;
-            border-top: 5px solid black;
+
+        /* Anime images */
+        .list img,
+        .anime-entry img {
+            height: 278px;
+            width: auto;
+            max-width: 100%;
             border-radius: 15%;
+            border-top: 5px solid black;
+            border-bottom: 5px solid black;
         }
-        .list h2 {
+
+        /* Anime titles */
+        .list h2,
+        .anime-entry h2 {
             font-size: 24px;
             margin: 10px 0;
         }
-        h2:hover {
+
+        .list h2:hover,
+        .anime-entry h2:hover {
             color: yellow;
         }
+
+        /* Link styling */
         p a {
             padding: 10px 15px;
             background-color: #c5832b;
-            color: white;
-            border-radius: 15%;
             color: #355E3b;
+            border-radius: 15%;
             text-decoration: none;
         }
+
         p a:hover {
             background-color: #ff9800;
             color: #0d1321;
             transform: scale(1.05);
             transition: background-color 0.3s ease, transform 0.3s ease;
         }
+
+        /* Hover effects for GIFs */
+        .BunnyGirl:hover img {
+            content: url(./images/bunny\ gif.gif);
+        }
+
+        .Clannad:hover img {
+            content: url(./images/clannad\ gif.gif);
+        }
+
+        .ClannadAfterStory:hover img {
+            content: url(./images/afterstory\ gif.gif);
+        }
+
+        .KaguyaSama:hover img {
+            content: url(./images/Kaguya\ gif.gif);
+        }
+
+        .Horimiya:hover img {
+            content: url(./images/Miyamura.gif);
+        }
+
+        .YourLieInApril:hover img {
+            content: url(./images/LIE\ GIF.gif);
+        }
+
+        .DomesticGF:hover img {
+            content: url(./images/Hina.gif);
+        }
+
+        .Kuzu:hover img {
+            content: url(./images/kuzu\ no.gif);
+        }
+
+        .WhiteAlbum2:hover img {
+            content: url(./images/white\ album2.gif);
+        }
+
+        .GoldenTime:hover img {
+            content: url(./images/Golden\ gif.gif);
+        }
+
+        .NagiNoAsuKara:hover img {
+            content: url(./images/LULL\ GIF.gif);
+        }
+
+        .YourName:hover img {
+            content: url(./images/KimiNoNawa.gif);
+        }
+
+        .Nisekoi:hover img {
+            content: url(./images/Chitoge.gif);
+        }
+
         .list:hover > :not(:hover) {
             filter: blur(1px);
             opacity: 0.5;
         }
-        /* Hover effect for images */
-        .Clannad:hover img {
-            content: url(./images/clannad\ gif.gif);
+
+        /* Responsive design */
+        @media (max-width: 768px) {
+            .header-container {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            h1 {
+                font-size: 28px;
+            }
+
+            .navbar {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .nav-item {
+                font-size: 16px;
+            }
+
+            .list > div,
+            .anime-entry {
+                width: 100%;
+                padding: 10px;
+                margin: 10px 0;
+            }
+
+            .list img,
+            .anime-entry img {
+                height: auto;
+                max-width: 100%;
+            }
         }
-        .ClannadAfterStory:hover img {
-            content: url(./images/afterstory\ gif.gif);
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 24px;
+            }
+
+            .nav-item {
+                font-size: 14px;
+            }
+
+            .anime-entry {
+                padding: 15px;
+                font-size: 14px;
+            }
+
+            p a {
+                font-size: 14px;
+                padding: 8px 12px;
+            }
         }
-        .Showa:hover img {
-            content: url(./images/SHOWA.gif);
-        }
-        .BunnyGirl:hover img {
-            content: url(./images/bunny\ gif.gif);
-        }
-        .KaguyaSama:hover img {
-            content: url(./images/Kaguya\ gif.gif);
-        }
-        .Horimiya:hover img {
-            content: url(./images/Miyamura.gif);
-        }
-        .YourLieInApril:hover img {
-            content: url(./images/LIE\ GIF.gif);
-        }
-        .DomesticGF:hover img {
-            content: url(./images/Hina.gif);
-        }
-        .Kuzu:hover img {
-            content: url(./images/kuzu\ no.gif);
-        }
-        .WhiteAlbum2:hover img {
-            content: url(./images/white\ album2.gif);
-        }
-        .GoldenTime:hover img {
-            content: url(./images/Golden\ gif.gif);
-        }
-        .NagiNoAsuKara:hover img {
-            content: url(./images/LULL\ GIF.gif);
-        }
-        .YourName:hover img {
-            content: url(./images/KimiNoNawa.gif);
-        }
-        .Nisekoi:hover img {
-            content: url(./images/Chitoge.gif);
-        }
-        .sticky-header {
-            position: sticky;
-            top: 0;
-            background-color: #0d1321;
-            padding-top: 10px;
-            z-index: 1000;
-        }
-        .sidebar {
-            position: fixed;
-            left: 0;
-            top: 0;
-            width: 250px;
-            height: 100%;
-            background-color: #20214d;
-            color: white;
-            padding-top: 20px;
-            display: flex;
-            flex-direction: column;
-        }
-        .sidebar a {
-            display: block;
-            color: white;
-            padding: 15px;
-            text-decoration: none;
-            font-family: "Josefin Sans", sans-serif;
-        }
-        .sidebar a:hover {
-            background-color: #c5832b;
-        }
-        .main-content {
-            margin-left: 250px;
+
+        @media (min-width: 1024px) {
+            .header-container {
+                padding: 20px 100px;
+            }
+
+            .navbar {
+                gap: 30px;
+            }
+
+            .nav-item {
+                font-size: 20px;
+            }
+
+            .list > div,
+            .anime-entry {
+                width: 300px;
+            }
         }
     </style>
 </head>
 <body>
-    <div class="main-content">
-        <div class="sidebar">
-            <a href="./index.html">Back to main page</a>
-            <br>
-            <a href="./Shonen.html">Shonen</a>
-            <a href="./Sci-Fi.html">Sci-Fi</a>
-            <a href="./Comedy.html">Comedy</a>
+    <div class="header-container">
+        <h1>Romance Anime Recommendations</h1>
+        <div class="navbar">
+            <a class="nav-item" href="./index.html">Back to Main Page</a>
+            <a class="nav-item" href="./Shonen.html">Shonen</a>
+            <a class="nav-item" href="./Sci-Fi.html">Sci-Fi</a>
+            <a class="nav-item" href="./Comedy.html">Comedy</a>
         </div>
-        <div class="sticky-header">
-            <h1>Romance Anime Recommendations</h1>
+    </div>
+    <div class="list">
+        <div class="BunnyGirl anime-entry">
+            <h2>Bunny Girl Senpai</h2>
+            <img src="./images/Bunny senpai.webp" alt="Bunny Girl Senpai">
+            <p>A mysterious phenomenon causes anomalies in Sakuta Azusagawa’s life. He meets a girl dressed as a bunny, only he can see. Together, they explore the mysteries surrounding Adolescence Syndrome and teenage hardships.</p>
+            <p><a href="https://myanimelist.net/anime/37450/Seishun_Buta_Yarou_wa_Bunny_Girl_Senpai_no_Yume_wo_Minai">More info</a></p>
         </div>
-        <hr>
-        <div class="list">
-            <div class="BunnyGirl">
-                <h2>Bunny Girl Senpai</h2>
-                <img src="./images/Bunny senpai.webp" alt="Bunny Girl Senpai">
-                <p>A mysterious phenomenon known as Adolescence Syndrome causes anomalies in Sakuta Azusagawa’s life. One day, he meets a girl dressed as a bunny, only he can see. Together, they explore the mysteries surrounding Adolescence Syndrome and navigate teenage hardships.</p>
-                <p><a href="https://myanimelist.net/anime/37450/Seishun_Buta_Yarou_wa_Bunny_Girl_Senpai_no_Yume_wo_Minai">More info</a></p>
-            </div>
-            <div class="Clannad">
-                <h2>Clannad</h2>
-                <img src="./images/Clannad.jpg" alt="Clannad">
-                <p>Delinquent Tomoya Okazaki meets the mysterious Nagisa Furukawa, and his life takes a new direction. Together, they help each other face past pains, find happiness, and discover the meaning of family.</p>
-                <p><a href="https://myanimelist.net/anime/2167/Clannad">More info</a></p>
-            </div>
-            <div class="ClannadAfterStory">
-                <h2>Clannad: After Story</h2>
-                <img src="./images/Clannad after story.webp" alt="Clannad: After Story">
-                <p>Continuing Tomoya and Nagisa’s story, After Story dives into the challenges of adulthood and the beauty and pain of life’s trials, making this an emotional journey of love and resilience.</p>
-                <p><a href="https://myanimelist.net/anime/4181/Clannad__After_Story">More info</a></p>
-            </div>
-            <div class="KaguyaSama">
-                <h2>Kaguya-sama: Love is War</h2>
-                <img src="./images/kaguya sama.jpg" alt="Kaguya-sama: Love is War">
-                <p>At Shuchiin Academy, two brilliant students, Kaguya Shinomiya and Miyuki Shirogane, engage in a psychological battle, each trying to make the other confess their feelings first. Love, strategy, and humor blend in this intense yet comedic war of romance.</p>
-                <p><a href="https://myanimelist.net/anime/37999/Kaguya-sama_wa_Kokurasetai__Tensai-tachi_no_Renai_Zunousen">More info</a></p>
-            </div>
-            <div class="Horimiya">
-                <h2>Horimiya</h2>
-                <img src="./images/horimiya.webp" alt="Horimiya">
-                <p>Kyouko Hori and Izumi Miyamura each hide a surprising side from the world. After a chance encounter, they become close friends, exploring both the trials of high school life and the beauty of finding someone who understands their true selves.</p>
-                <p><a href="https://myanimelist.net/anime/42897/Horimiya">More info</a></p>
-            </div>
-            <div class="YourLieInApril">
-                <h2>Your Lie in April</h2>
-                <img src="./images/lie.webp" alt="Your Lie in April">
-                <p>After losing his ability to play piano due to trauma, Kousei Arima meets the vibrant violinist Kaori Miyazono, who reignites his passion for music and life. This story is an emotional journey about love, loss, and finding oneself.</p>
-                <p><a href="https://myanimelist.net/anime/23273/Shigatsu_wa_Kimi_no_Uso">More info</a></p>
-            </div>
-            <div class="DomesticGF">
-                <h2>Domestic Girlfriend</h2>
-                <img src="./images/Domestic Girlfriend.webp" alt="Domestic Girlfriend">
-                <p>Natsuo Fujii, in love with his teacher, Hina, finds himself in an unusual situation when he enters a relationship with Rui, Hina’s younger sister. This series dives into complex emotions, unrequited love, and difficult relationships.</p>
-                <p><a href="https://myanimelist.net/anime/37982/Domestic_na_Kanojo">More info</a></p>
-            </div>
-            <div class="Kuzu">
-                <h2>Kuzu no Honkai</h2>
-                <img src="./images/kuzu.jpg" alt="Kuzu no Honkai">
-                <p>Hanabi and Mugi, high school students in unrequited love with their teachers, enter a relationship to fill the void of loneliness. This mature drama explores painful and complicated aspects of love.</p>
-                <p><a href="https://myanimelist.net/anime/32949/Kuzu_no_Honkai">More info</a></p>
-            </div>
-            <div class="WhiteAlbum2">
-                <h2>White Album 2</h2>
-                <img src="./images/white.jpg" alt="White Album 2">
-                <p>Haruki Kitahara’s life changes when he meets Setsuna and Kazusa, forming an unforgettable bond filled with dreams, heartbreak, and love. This series is a tale of romance, loyalty, and the pains of growing up.</p>
-                <p><a href="https://myanimelist.net/anime/18245/White_Album_2">More info</a></p>
-            </div>
-            <div class="GoldenTime">
-                <h2>Golden Time</h2>
-                <img src="./images/golden.jpg" alt="Golden Time">
-                <p>Tada Banri, a college freshman with a lost memory, begins a new life in Tokyo, where he meets Koko Kaga. As they fall in love, Banri’s past slowly catches up, challenging their relationship and his new life.</p>
-                <p><a href="https://myanimelist.net/anime/17895/Golden_Time">More info</a></p>
-            </div>
-            <div class="NagiNoAsuKara">
-                <h2>Nagi no Asu Kara</h2>
-                <img src="./images/lull in the sea.jpg" alt="Nagi no Asu Kara">
-                <p>In a world where humans live both on land and under the sea, four childhood friends experience love, loss, and change as they navigate their relationships amid differences between their communities.</p>
-                <p><a href="https://myanimelist.net/anime/16067/Nagi_no_Asu_kara">More info</a></p>
-            </div>
-            <div class="YourName">
-                <h2>Your Name</h2>
-                <img src="./images/your name.jpg" alt="Your Name">
-                <p>Mitsuha and Taki, two strangers who live completely different lives, find themselves mysteriously connected as they switch bodies. This enchanting story explores fate, longing, and the bonds that transcend time and distance.</p>
-                <p><a href="https://myanimelist.net/anime/32281/Kimi_no_Na_wa">More info</a></p>
-            </div>
-            <div class="Nisekoi">
-                <h2>Nisekoi</h2>
-                <img src="./images/nisekoi.webp" alt="Nisekoi">
-                <p>Raku Ichijou, heir to a yakuza family, is forced into a fake relationship with Chitoge Kirisaki, the daughter of a rival gang. Though they initially clash, they grow closer over time, but Raku’s heart still yearns for his childhood crush.</p>
-                <p><a href="https://myanimelist.net/anime/18897/Nisekoi">More info</a></p>
-            </div>
+        <div class="Clannad anime-entry">
+            <h2>Clannad</h2>
+            <img src="./images/Clannad.jpg" alt="Clannad">
+            <p>Tomoya Okazaki meets Nagisa Furukawa, and his life takes a new direction. They help each other face past pains, find happiness, and discover the meaning of family.</p>
+            <p><a href="https://myanimelist.net/anime/2167/Clannad">More info</a></p>
         </div>
-        <hr>
+        <div class="ClannadAfterStory anime-entry">
+            <h2>Clannad: After Story</h2>
+            <img src="./images/Clannad after story.webp" alt="Clannad: After Story">
+            <p>The continuation of Tomoya and Nagisa’s story, diving into adulthood’s challenges and the beauty and pain of family life, love, and sacrifice.</p>
+            <p><a href="https://myanimelist.net/anime/2168/Clannad__After_Story">More info</a></p>
+        </div>
+        <div class="KaguyaSama anime-entry">
+            <h2>Kaguya-sama: Love is War</h2>
+            <img src="./images/kaguya sama.jpg" alt="Kaguya-sama: Love is War">
+            <p>The student council president and vice president, Kaguya Shinomiya and Miyuki Shirogane, are secretly in love with each other but too proud to confess. A war of wits ensues as they try to make the other confess first.</p>
+            <p><a href="https://myanimelist.net/anime/35472/Kaguya-sama__Love_is_War">More info</a></p>
+        </div>
+        <div class="Horimiya anime-entry">
+            <h2>Horimiya</h2>
+            <img src="./images/lie.webp" alt="Horimiya">
+            <p>A story about the unlikely friendship and romance between the popular Hori and the quiet, reserved Miyamura. Together, they discover each other’s hidden sides and grow closer.</p>
+            <p><a href="https://myanimelist.net/anime/40748/Horimiya">More info</a></p>
+        </div>
+        <div class="YourLieInApril anime-entry">
+            <h2>Your Lie in April</h2>
+            <img src="./images/lieinapril.webp" alt="Your Lie in April">
+            <p>A pianist, Kousei Arima, who has lost the ability to hear the sound of the piano, meets a lively violinist, and the two develop a bond that changes his life forever.</p>
+            <p><a href="https://myanimelist.net/anime/23273/Shigatsu_wa_Kimi_no_Uso">More info</a></p>
+        </div>
+        <div class="DomesticGF anime-entry">
+            <h2>Domestic Girlfriend</h2>
+            <img src="./images/Domestic Girlfriend.webp" alt="Domestic Girlfriend">
+            <p>Natsuo Fujii starts an affair with his teacher, Hina, and later discovers that his father has remarried, making Hina his step-sister. Confusion and love triangles ensue.</p>
+            <p><a href="https://myanimelist.net/anime/39525/Domestic_na_Kanojo">More info</a></p>
+        </div>
+        <div class="Kuzu anime-entry">
+            <h2>Kuzu no Honkai</h2>
+            <img src="./images/kuzu.jpg" alt="Kuzu no Honkai">
+            <p>Hanabi Yasuraoka and Mugi Awaya are deeply in love with their respective crushes, yet they settle for a complicated relationship with each other as they grapple with the idea of what love truly is.</p>
+            <p><a href="https://myanimelist.net/anime/33760/Kuzu_no_Honkai">More info</a></p>
+        </div>
+        <div class="WhiteAlbum2 anime-entry">
+            <h2>White Album 2</h2>
+            <img src="./images/white.jpg" alt="White Album 2">
+            <p>A love story about a boy, Touya, who is caught between two girls, Setsuna and Kazusa, as they pursue their dreams of music and love.</p>
+            <p><a href="https://myanimelist.net/anime/20293/White_Album_2">More info</a></p>
+        </div>
+        <div class="GoldenTime anime-entry">
+            <h2>Golden Time</h2>
+            <img src="./images/golden.jpg" alt="Golden Time">
+            <p>A college romance where Banri Tada, suffering from amnesia, falls in love with Koko Kaga, a spirited girl. As their relationship develops, they face pasts that threaten their future.</p>
+            <p><a href="https://myanimelist.net/anime/17871/Golden_Time">More info</a></p>
+        </div>
+        <div class="NagiNoAsuKara anime-entry">
+            <h2>Nagi no Asukara</h2>
+            <img src="./images/lull in the sea.jpg" alt="Nagi no Asukara">
+            <p>A beautiful coming-of-age story about four friends from the sea who struggle with their relationships as they are pulled between the sea and the land.</p>
+            <p><a href="https://myanimelist.net/anime/16912/Nagi_no_Asukara">More info</a></p>
+        </div>
+        <div class="YourName anime-entry">
+            <h2>Your Name</h2>
+            <img src="./images/your name.jpg" alt="Your Name">
+            <p>Two teenagers, Taki and Mitsuha, swap bodies and embark on a journey to find each other while uncovering a mysterious connection between them across time and space.</p>
+            <p><a href="https://myanimelist.net/anime/33367/Kimi_no_Na wa">More info</a></p>
+        </div>
+        <div class="Nisekoi anime-entry">
+            <h2>Nisekoi</h2>
+            <img src="./images/nisekoi.webp" alt="Nisekoi">
+            <p>Raku Ichijou, the heir of a Yakuza family, is forced to pretend to date Chitoge Kirisaki, a girl from a rival family, as they search for a promise key from their childhood.</p>
+            <p><a href="https://myanimelist.net/anime/20947/Nisekoi">More info</a></p>
+        </div>
     </div>
 </body>
 </html>
