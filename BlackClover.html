@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="favicon.ico">
+    <title>Attack on Titan - Anime</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body, html {
+            height: 100%;
+            font-family: "Josefin Sans", sans-serif;
+        }
+
+        .video-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -2;
+        }
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: -1;
+        }
+
+        .content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            text-align: center;
+            z-index: 1;
+        }
+        .content h1 {
+            font-size: 3em;
+            font-weight: bold;
+            text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.7);
+        }
+        .content p {
+            font-size: 1.2em;
+            margin-top: 20px;
+            text-align: justify;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+        }
+        .content a {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 15px 25px;
+            font-size: 1.1em;
+            background-color: #c5832b;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            text-transform: uppercase;
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Button Hover Effect */
+        .content a:hover {
+            background-color: #ff9800;
+            transition: background-color 0.3s ease;
+        }
+
+        /* Logo Style */
+        .logo {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            width: 100px;
+            height: auto;
+        }
+
+        /* Navigation Back Button Style */
+        .nav-button {
+            position: absolute;
+            top: 10px;
+            right: 20px;
+            padding: 10px 20px;
+            font-size: 1em;
+            background-color: #2e51a2;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+        }
+
+        .nav-button:hover {
+            background-color: #ff9800;
+            transition: background-color 0.3s ease;
+        }
+    </style>
+</head>
+<body>
+    <div class="overlay">
+    <video class="video-background" autoplay loop muted>
+        <source src="./images/BlackCloverBG.mp4" type="video/mp4">  
+        Your browser does not support the video tag.
+    </video>
+</div>
+    <div class="overlay">
+
+    <img src="./images/Black Clover logo.png" alt="Black Clover logo" class="logo">
+
+    <!-- Navigation Button -->
+    <a href="./test.html" class="nav-button">Back to Page</a>
+
+    <!-- Content Section -->
+    <div class="content">
+        <h1>Black Clover</h1>
+        <br>
+        <p><strong>Status:</strong> Finished Airing</p>
+        <p><strong>Episodes:</strong> 75</p>
+        <p><strong>Aired:</strong> Apr 7, 2013 to Apr 4, 2023</p>
+        <p><strong>Genres:</strong> Action, Drama, Fantasy, Shounen, Super Power</p>
+        <p><strong>Synopsis:</strong> Humanity fights for survival against the terrifying Titans. Eren Yeager and his friends join the Survey Corps to battle the Titans and uncover dark secrets that threaten their world. The series follows the intense struggles of the characters as they face existential threats from the Titans, along with themes of sacrifice, freedom, and the consequences of war.</p>
+    </div>
+</div>
+</body>
+</html>
