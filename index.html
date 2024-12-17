@@ -25,7 +25,6 @@
             line-height: 1.6;
         }
 
-        /* Heading styles */
         h1 {
             font-family: "Bebas Neue", sans-serif;
             font-weight: bold;
@@ -37,7 +36,7 @@
         h1:hover {
             color: #51e668;
         }
-        /* Container to hold navbar and heading in a row */
+
         .header-container {
             display: flex;
             justify-content: space-between;
@@ -47,7 +46,6 @@
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
 
-        /* Navbar styles */
         .navbar {
             display: flex;
             gap: 20px;
@@ -64,7 +62,6 @@
             color: #ffffff;
         }
 
-        /* Anime list container */
         .list {
             display: flex;
             flex-wrap: wrap;
@@ -73,7 +70,6 @@
             gap: 20px;
         }
 
-        /* Individual anime entry styling */
         .list > div,
         .anime-entry {
             background-color: #c5832b;
@@ -92,7 +88,6 @@
             background-color: #ff9800;
         }
 
-        /* Anime images */
         .list img,
         .anime-entry img {
             height: 278px;
@@ -103,7 +98,6 @@
             border-bottom: 5px solid black;
         }
 
-        /* Anime titles */
         .list h2,
         .anime-entry h2 {
             font-size: 24px;
@@ -115,7 +109,6 @@
             color: yellow;
         }
 
-        /* Link styles */
         p a {
             padding: 10px 15px;
             background-color: #c5832b;
@@ -201,18 +194,18 @@
             .anime-entry {
                 width: 300px;
             }
-            }
+        }
     </style>
 </head>
 <body>
     <div class="header-container">
         <h1>My Top Picks</h1>
         <div class="navbar">
-            <a class="nav-item" href="./Shonen.html">Shonen</a>
-            <a class="nav-item" href="./Sci-Fi.html">Sci-Fi</a>
-            <a class="nav-item" href="./Romance.html">Romance</a>
-            <a class="nav-item" href="./Comedy.html">Comedy</a>
-            <a class="nav-item" href="./profile.html">About me</a>
+            <a class="nav-item" href="./Shonen.html" onclick="navClick(event)">Shonen</a>
+            <a class="nav-item" href="./Sci-Fi.html" onclick="navClick(event)">Sci-Fi</a>
+            <a class="nav-item" href="./Romance.html" onclick="navClick(event)">Romance</a>
+            <a class="nav-item" href="./Comedy.html" onclick="navClick(event)">Comedy</a>
+            <a class="nav-item" href="./profile.html" onclick="navClick(event)">About me</a>
         </div>
     </div>
     <div class="list">
@@ -236,5 +229,27 @@
     </div>
     <hr>
     <footer><p>&copy; 2024 Anime Recommendations. All rights reserved.</p></footer>
+
+    <script>
+        function navClick(event) {
+            event.preventDefault();
+            alert("Navigating to " + event.target.textContent + " page.");
+            window.location.href = event.target.href;
+
+            document.querySelectorAll('.nav-item').forEach(link => {
+                link.addEventListener('click', (e) => {
+            e.preventDefault();
+            const target = e.target.getAttribute('href');
+            if (target.startsWith('#')) {
+                document.querySelector(target).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            } else {
+                window.location.href = target;
+            }
+        });
+    });
+        }
+    </script>
 </body>
 </html>
