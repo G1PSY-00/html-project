@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="favicon.ico">
+    <title>Attack on Titan - Anime</title>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body, html {
+            height: 100%;
+            font-family: "Josefin Sans", sans-serif;
+        }
+        body {
+            color: bisque;
+            background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8));
+            height: 100%;
+            position: relative;
+        }
+
+        .video-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -2;
+        }
+
+        .content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            text-align: center;
+            z-index: 1;
+        }
+
+        .content h1 {
+            font-size: 3em;
+            font-weight: bold;
+            text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.7);
+        }
+
+
+        .content p {
+            font-size: 1.2em;
+            margin-top: 20px;
+            text-align: justify;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+        }
+
+        .content a {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 15px 25px;
+            font-size: 1.1em;
+            background-color: #c5832b;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            text-transform: uppercase;
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+        }
+
+
+        .content a:hover {
+            background-color: #ff9800;
+            transition: background-color 0.3s ease;
+        }
+
+
+        .logo {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            width: 100px;
+            height: auto;
+        }
+
+
+        .nav-button {
+            position: absolute;
+            top: 10px;
+            right: 20px;
+            padding: 10px 20px;
+            font-size: 1em;
+            background-color: #2e51a2;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+        }
+
+        .nav-button:hover {
+            background-color: #ff9800;
+            transition: background-color 0.3s ease;
+        }
+
+        @media (max-width: 768px) {
+            .header-container {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            h1 {
+                font-size: 28px;
+            }
+
+            .navbar {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .nav-item {
+                font-size: 16px;
+            }
+
+            .list > div,
+            .anime-entry {
+                width: 100%;
+                padding: 10px;
+                margin: 10px 0;
+            }
+
+            .list img,
+            .anime-entry img {
+                height: auto;
+                max-width: 100%;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 24px;
+            }
+
+            .nav-item {
+                font-size: 14px;
+            }
+
+            .anime-entry {
+                padding: 15px;
+                font-size: 14px;
+            }
+
+            p a {
+                font-size: 14px;
+                padding: 8px 12px;
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .header-container {
+                padding: 20px 100px;
+            }
+
+            .navbar {
+                gap: 30px;
+            }
+
+            .nav-item {
+                font-size: 20px;
+            }
+
+            .list > div,
+            .anime-entry {
+                width: 300px;
+            }
+            }
+    </style>
+</head>
+<body>
+    <video class="video-background" autoplay loop muted aria-label="Attack on Titan Background Video">
+        <source src="./videobg/Jojo’s Call Out Their Stands - Rodog (720p, h264, youtube).mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <img src="./logo/Jojos-Bizarre-Adventure-Emblem.png" alt="Attack on Titan Logo" class="logo">
+
+    <a href="./Shonen.html" class="nav-button">Back to Page</a>
+    <div class="content">
+        <h1>JoJo's Bizzare Adventures</h1>
+        <br>
+        <p><strong>Status:</strong> Ongoing??</p>
+        <p><strong>Episodes:</strong> 194</p>
+        <p><strong>Aired:</strong> October 6, 2012</p>
+        <p><strong>Genres:</strong> Adventure, Supernatural</p>
+        <p><strong>Synopsis:</strong>
+            <br>
+            Part I: Phantom Blood
+            Jonathan Joestar, the son of a wealthy landowner, fights his adoptive brother Dio Brando, who wants to take over the family. Jonathan learns the Hamon martial arts technique to defeat Dio.
+            <br> 
+            Part II: Battle Tendency
+            Jonathan's grandson Joseph Joestar fights the Pillar Men, ancient humanoids who created the Stone Mask. 
+            <br>
+            Part III: Stardust Crusaders
+            Jotaro Kujo and his group travel from Tokyo to Cairo to save his mother's life and defeat Dio. 
+            <br>
+            Part IV: Golden Wind
+            Josuke Higashikata, the illegitimate son of Joseph, and his friends investigate a series of homicides in 1999. 
+            Part V: Stone Ocean
+            <br>
+            Giorno Giovanna, the son of Dio, tries to rise through the Neapolitan mafia by taking down Passione.</p>
+    </div>
+</body>
+</html>
